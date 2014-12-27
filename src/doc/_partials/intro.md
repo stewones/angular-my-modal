@@ -1,0 +1,1 @@
+provides a reusable way to do modal in AngularJS using `ui.bootstrap`
