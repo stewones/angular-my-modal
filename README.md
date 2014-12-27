@@ -24,7 +24,7 @@ angular.module('my.app', [
 ])
 ```
 
-<br />
+
 
 ## Usage
 --------
@@ -36,7 +36,7 @@ angular.module('my.app', [
 ```
 
 Check out [documentation](https://modal.stpa.co) for more examples
-<br />
+
 
 ## Install for development
 --------------------------
@@ -83,7 +83,7 @@ $ gulp build #Note: maybe you should have to use `sudo`
 
 **Note:** to update docs run `gulp build` and make a pull-request into `gh-pages` branch only with content of `dist/doc` folder. I like to work with another folder (and repo) just for the docs (pointing to the same remote), maybe you will like also. You can use the `build.sh` script located in the root to automate the process, but check it before. Also check tasks located on gulp folder for more details.
 
-<br />
+
 
 Feel free to open issues if you run into trouble or have suggestions. Pull Requests are always welcome.
 
