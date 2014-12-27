@@ -1,0 +1,346 @@
+<!doctype html>
+<html class="no-js" lang="pt-br" ng-app="stpa" ng-controller="ModalCtrl as vm">
+    <head>
+        <meta charset="utf-8">
+        <title>Reusable directive for modal in AngularJS using ui.bootstrap</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="stpa.co" />
+        <meta name="robots" content="index, follow"/>
+        <meta content="article" property="og:type">
+        <meta content="stpa-modal" property="og:title">
+        <meta content="Reusable directive for modal in AngularJS using ui.bootstrap" property="og:description">
+        <meta content="https://modal.stpa.co" property="og:url">
+        <meta content="https://stpa.co/about/" property="article:author">
+        <meta content="https://stpa.co/assets/images/stpa-symbol.png" property="og:image">
+        <meta content="angularjs" property="article:section">
+        <meta content="modal" property="article:tag">
+        <meta content="ui.bootstrap" property="article:tag">
+        <link rel="shortcut icon" href="https://stpa.co/assets/images/favicon.png">
+        <link rel="stylesheet" href="css/vendor-d2ab08de.css">
+        <link rel="stylesheet" href="./css/example.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/8.4.0/styles/github.min.css">
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser.
+        Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+    </p>
+<![endif]-->
+        <a href="https://github.com/stpa-co/stpa-modal"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                        <ul class="nav tabs-vertical col-sm-2" role="tablist">
+                            <li class="text-center">
+                                <a href="https://stpa.co" class="logo">
+                                <img src="https://stpa.co/assets/images/stpa-symbol.png">
+                                </a>
+                                <h1>stpa-modal</h1>
+                                <!-- GIT STAR -->
+                                <a class="github-button" href="https://github.com/stpa-co/stpa-modal" data-icon="octicon-star" data-count-href="/stpa-co/stpa-modal/stargazers" data-count-api="/repos/stpa-co/stpa-modal#stargazers_count">Star</a>
+                                <!-- /GIT STAR -->
+                                <p>
+                                <p>provides a reusable way to do modal in AngularJS using <code>ui.bootstrap</code></p>
+
+                                </p>
+                            </li>
+                            <li>
+                                <hr />
+                            </li>
+                            <li role="presentation" class="dropdown">
+                                <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents" aria-expanded="false">Examples <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
+                                    <li><a href="#sample1" tabindex="-1" role="tab" id="sample1-tab" data-toggle="tab" aria-controls="sample1">Sample 1</a></li>
+                                    <li><a href="#sample2" tabindex="-1" role="tab" id="sample2-tab" data-toggle="tab" aria-controls="sample2">Sample 2</a></li>
+                                    <li><a href="#sample3" tabindex="-1" role="tab" id="sample3-tab" data-toggle="tab" aria-controls="sample3">Sample 3</a></li>
+                                </ul>
+                            </li>
+                            <li role="presentation" class="active">
+                            <a href="#install" id="install-tab" role="tab" data-toggle="tab" aria-controls="install" aria-expanded="true">Install</a></li>
+                            <li role="presentation" class="">
+                            <a href="#params" role="tab" id="params-tab" data-toggle="tab" aria-controls="params" aria-expanded="false">Params</a></li>
+                            <li role="presentation" class="">
+                            <a href="#markup" role="tab" id="markup-tab" data-toggle="tab" aria-controls="markup" aria-expanded="false">Markup</a></li>
+                            <li role="presentation" class="">
+                            <a href="#event" role="tab" id="event-tab" data-toggle="tab" aria-controls="event" aria-expanded="false">Events</a></li>
+                            <li role="presentation" class="">
+                            <a href="#callback" role="tab" id="callback-tab" data-toggle="tab" aria-controls="callback" aria-expanded="false">Callbacks</a></li>
+                            <li>
+                                <hr />
+                            </li>
+                            <li class="text-center copyright">
+                                Built with love by <a href="https://twitter.com/stewones">@stewones</a> using gulp.js, angular.js and bootstrap.
+                                <br />
+                                Open an <a href="https://github.com/stpa-co/stpa-modal/issues">issue</a> and make your <a href="https://github.com/stpa-co/stpa-modal/pulls">pull-request</a>.
+                                <br />
+                                Code licensed under MIT.
+                            </li>
+                            <li class="gh">
+                                <!-- GIT FOLLOW -->
+                                <a class="github-button" href="https://github.com/stewones" data-count-href="/stewones/followers" data-count-api="/users/stewones#followers">Follow me @GitHub</a>
+                                <!-- /GIT FOLLOW -->
+                            </li>
+                        </ul>
+                        <div id="" class="tab-content col-sm-10">
+                            <div role="tabpanel" class="tab-pane fade active in" id="install" aria-labelledby="install-tab">
+                                <h2 id="install-for-production">Install for production</h2>
+<hr>
+<ul>
+<li>install stpa-modal running the following command on terminal</li>
+</ul>
+<pre><code class="lang-shell">$ bower install stpa-modal --save
+</code></pre>
+<ul>
+<li>include <code>stpa-modal.min.js</code> on your project. It should be located at <code>bower_components/stpa-modal/src</code></li>
+</ul>
+<pre><code class="lang-html">&lt;script src=&quot;../bower_components/stpa-modal/src/stpa-modal.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<ul>
+<li>add <code>stpaModal</code> and <code>ui.bootstrap</code> as a module dependency to your app</li>
+</ul>
+<pre><code class="lang-js">angular.module(&#39;my.app&#39;, [
+    &#39;stpaModal&#39;,
+    &#39;ui.bootstrap&#39;
+])
+</code></pre>
+<p><br /></p>
+<h2 id="usage">Usage</h2>
+<hr>
+<ul>
+<li>insert <code>&lt;stpa-modal&gt;&lt;/stpa-modal&gt;</code> directive into your template</li>
+</ul>
+<pre><code class="lang-html">&lt;stpa-modal
+body=&quot;Hello World!&quot;&gt;                     
+    Open Modal
+&lt;/stpa-modal&gt;
+</code></pre>
+<p><br /></p>
+<h2 id="install-for-development">Install for development</h2>
+<hr>
+<ul>
+<li>install node and bower on your environment</li>
+<li>cd to your devolpment folder and clone repo</li>
+</ul>
+<pre><code class="lang-sh">$ git clone https://github.com/stpa-co/stpa-modal.git stpa-modal
+$ cd stpa-modal
+</code></pre>
+<ul>
+<li>install module dependencies</li>
+</ul>
+<pre><code class="lang-sh">$ npm install
+$ bower install
+</code></pre>
+<ul>
+<li>serve project</li>
+</ul>
+<pre><code class="lang-sh">$ gulp serve
+</code></pre>
+<p><strong>Note:</strong> running the command <code>gulp build</code> should generate minified src at <code>src/stpa-modal.min.js</code> and docs on <code>dist/doc</code> folder.</p>
+<p><strong>Note:</strong> running the command <code>gulp serve</code> should generate minified src at <code>src/stpa-modal.min.js</code>, docs on <code>dist/doc</code> folder and serves on <code>http://localhost:3000/doc</code> with watch changes and live reload.</p>
+<p><strong>Note:</strong> running the command <code>gulp serve:dist</code> should generate minified src at <code>src/stpa-modal.min.js</code>, docs on <code>dist/doc</code> folder and serves on <code>http://localhost:3000/doc</code> with minified bower dependencies.</p>
+<p><strong>Note:</strong> to update project src open an issue, fork the project, do your work, run <code>gulp build</code> and make a pull-request. </p>
+<p><strong>Note:</strong> to update docs run <code>gulp build</code> and make a pull-request into <code>gh-pages</code> branch only with content of <code>dist/doc</code> folder. You must have another  repository only for the docs. You can use the <code>build.sh</code> script located in root to automate the process. </p>
+<p>Please check out the tasks on gulp folder for more details.</p>
+<p><br /></p>
+<h2 id="mit-licensed">MIT Licensed</h2>
+<hr>
+
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="params" aria-labelledby="params-tab">
+                                <h2 id="directive-accepts-the-following-params">directive accepts the following params</h2>
+<hr>
+<pre><code class="lang-js">{
+    name: &#39;&#39;, //default &quot;My stpa-modal&quot;
+    bodyClass: &#39;&#39;, //default &quot;my-body-class&quot;
+    body: &#39;&#39;, //default null
+    template: &#39;path_to_html/file.html&#39;, //default false
+    scope: {} //default null 
+    size: &#39;lg&#39;, //default sm | options lg - md - sm
+    windowClass: &#39;&#39;, //default &quot;stpa-modal-window&quot;
+    backdrop: true, //default true 
+}
+</code></pre>
+
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="markup" aria-labelledby="markup-tab">
+                                <h2 id="template-markup-for-directive">template markup for directive</h2>
+<hr>
+<pre><code class="lang-html">{{ vm.templateMarkup }}
+</code></pre>
+
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="callback" aria-labelledby="callback-tab">
+                                <h2 id="callbacks">callbacks</h2>
+<hr>
+<p><em>sample-controller.js - callback modal accept</em></p>
+<pre><code class="lang-js">    function ModalCtrl($rootScope) {
+        $rootScope.$on(&#39;StpaModalOkCallback&#39;,function(){
+            alert(&#39;Ok Pressed&#39;);
+        });
+    }
+</code></pre>
+<p><em>sample-controller.js - callback modal cancel</em></p>
+<pre><code class="lang-js">    function ModalCtrl($rootScope) {
+        $rootScope.$on(&#39;StpaModalCancelCallback&#39;,function(){
+            alert(&#39;Cancel Pressed&#39;);
+        });
+    }
+</code></pre>
+
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="event" aria-labelledby="event-tab">
+                                <h2 id="events">events</h2>
+<hr>
+<p><em>sample-controller.js - trigger modal accept</em></p>
+<pre><code class="lang-js">    function ModalCtrl($rootScope) {
+        $rootScope.$emit(&#39;StpaModalOk&#39;);
+    }
+</code></pre>
+<p><em>sample-controller.js - trigger modal cancel</em></p>
+<pre><code class="lang-js">    function ModalCtrl($rootScope) {
+        $rootScope.$emit(&#39;StpaModalCancel&#39;);
+    }
+</code></pre>
+
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="sample1" aria-labelledby="sample1-tab">
+                                <h2 id="sample-1-simple-modal">Sample 1 - Simple modal</h2>
+<hr>
+<p><stpa-modal
+name="My Beautiful Modal"
+body-class="my-body-class"
+body="Hello World!"
+size="lg"><br>Click here to open a simple modal
+</stpa-modal></p>
+<p><em>sample-directive.html</em></p>
+<pre><code class="lang-html">&lt;stpa-modal
+name=&quot;My Beautiful Modal&quot;
+body-class=&quot;my-body-class&quot;
+body=&quot;Hello World!&quot;
+size=&quot;lg&quot;&gt;                     
+Click here to open a simple modal
+&lt;/stpa-modal&gt;
+</code></pre>
+
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="sample2" aria-labelledby="sample2-tab">
+                                <h2 id="sample-2-modal-with-dynamic-data-binding">Sample 2 - Modal with dynamic data-binding</h2>
+<hr>
+<p><stpa-modal
+name="My Day Modal"
+body-class="my-body-class"
+body="Hello World! Today is <strong>{{vm.date}}</strong>"
+size="lg"><br>Click here to open a modal with dynamic data-binding
+</stpa-modal></p>
+<p><em>sample-directive.html</em></p>
+<pre><code class="lang-html">&lt;stpa-modal
+name=&quot;My Day Modal&quot;
+body-class=&quot;my-body-class&quot;
+body=&quot;Hello World! Today is &lt;strong&gt;{{vm.dateLabel}}&lt;/strong&gt;&quot;
+size=&quot;lg&quot;&gt;                     
+Click here to open a modal with dynamic data-binding
+&lt;/stpa-modal&gt;
+</code></pre>
+<p><em>sample-controller.js</em></p>
+<pre><code class="lang-js">    function ModalCtrl() {
+        var vm = this, //this way vm is passed to scope by controllerAs syntax with no using of $scope
+            today = moment().format(&#39;dddd&#39;);
+
+        vm.date = today + ((today != &#39;Friday&#39; &amp;&amp; today != &#39;Saturday&#39; &amp;&amp; today != &#39;Sunday&#39;) ? &#39; =/&#39; : &#39; =D&#39;);
+    }
+</code></pre>
+
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="sample3" aria-labelledby="sample3-tab">
+                                <h2 id="sample-3-modal-with-custom-template">Sample 3 - Modal with custom template</h2>
+<hr>
+<p><stpa-modal
+name="My Modal With Template"
+body-class="my-body-class"
+template="sample-template.html"
+scope="vm"
+size="lg"><br>Click here to open a modal with custom template
+</stpa-modal></p>
+<p><em>sample-directive.html</em></p>
+<pre><code class="lang-html">&lt;stpa-modal
+name=&quot;My Modal With Template&quot;
+body-class=&quot;my-body-class&quot;
+template=&quot;sample-template.html&quot;
+scope=&quot;vm&quot;
+size=&quot;lg&quot;&gt;                     
+Click here to open a modal with custom template
+&lt;/stpa-modal&gt;
+</code></pre>
+<p><em>sample-template.html</em></p>
+<pre><code class="lang-html">&lt;div class=&quot;modal-header&quot;&gt;
+    &lt;h3 class=&quot;modal-title&quot;&gt;{{vm.templateSettingNameLabel}}&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class=&quot;modal-body change-template&quot;&gt;
+&lt;p&gt;do your best here&lt;/p&gt;
+&lt;p&gt;hello world, today is &lt;strong&gt;{{vm.templateDateLabel}}&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;you can pass custom objects to template by the scope param in directive&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;modal-footer&quot;&gt;
+    &lt;button class=&quot;btn btn-primary&quot; ng-click=&quot;StpaModalCtrl.ok()&quot;&gt;OK&lt;/button&gt;
+    &lt;button class=&quot;btn btn-warning&quot; ng-click=&quot;StpaModalCtrl.cancel()&quot;&gt;Cancel&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<p><em>sample-controller.js</em></p>
+<pre><code class="lang-js">    function ModalCtrl() {
+        var vm = this, //this way vm is passed to scope by controllerAs syntax with no using of $scope
+            today = moment().format(&#39;dddd&#39;);
+
+        vm.date = today + (today == &#39;Friday&#39; ? &#39; =D&#39; : &#39; =/&#39;);
+    }
+</code></pre>
+
+                            </div>
+                            <br />
+                            <ul class="social">
+                                <li style="width: 140px; text-align: left;">
+                                    <!-- FB -->
+                                    <iframe src="//www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fmodal.stpa.co&amp;layout=button_count" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe>
+                                    <!-- /FB -->
+                                </li>
+                                <li style="width: 154px; margin-right: 12px;">
+                                    <!-- G+ -->
+                                    <div class="g-plus" data-action="share" data-annotation="bubble" data-href="https://modal.stpa.co"></div>
+                                    <!-- /G+ -->
+                                </li>
+                                <li style="margin-right: 12px;" class="visible-lg">
+                                    <!-- TW+ -->
+                                    <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="angularjs">Tweet</a>
+                                    <!-- /TW+ -->
+                                </li>
+                                <li style="margin-right: 12px;" class="visible-lg">
+                                    <!-- GIT WATCH -->
+                                    <a class="github-button" href="https://github.com/stpa-co/stpa-modal" data-icon="octicon-eye" data-count-href="/stpa-co/stpa-modal/watchers" data-count-api="/repos/stpa-co/stpa-modal#subscribers_count">Watch</a>
+                                    <!-- /GIT WATCH -->
+                                </li>
+                                <li style="margin-right: 12px;" class="hidden-xs">
+                                    <!-- GIT ISSUE -->
+                                    <a class="github-button" href="https://github.com/stpa-co/stpa-modal/issues" data-icon="octicon-issue-opened" data-count-api="/repos/stpa-co/stpa-modal#open_issues_count">Issue</a>
+                                    <!-- /GIT ISSUE -->
+                                </li>
+                                <li class="visible-lg">
+                                    <!-- FORK -->
+                                    <a class="github-button" href="https://github.com/stpa-co/stpa-modal" data-icon="octicon-git-branch" data-count-href="/stpa-co/stpa-modal/network" data-count-api="/repos/stpa-co/stpa-modal#forks_count">Fork</a>
+                                    <!-- /FORK -->
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/highlight.js/8.4.0/highlight.min.js"></script>
+        <script src="js/vendor-e4216363.js"></script>
+        <script src="./js/stpa-modal.min.js"></script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <script src="https://buttons.github.io/buttons.js" async defer id="github-bjs"></script>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <script src="./js/example.js"></script>
+    </body>
+</html>
