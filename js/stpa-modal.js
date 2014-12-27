@@ -23,7 +23,7 @@
   */
  "use strict";
  (function() {
-     var mod = angular.module("stpaModal", []);
+     var mod = angular.module("stpa.modal", []);
      mod.directive('stpaModal', function($modal) {
          return {
              transclude: true,

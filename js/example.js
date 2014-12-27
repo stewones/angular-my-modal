@@ -6,7 +6,7 @@
     'use strict';
 
     angular.module('stpa', [
-        'stpaModal',
+        'stpa.modal',
         'ui.bootstrap'
     ])
         .controller('ModalCtrl', ['$timeout', '$rootScope', ModalCtrl]);
