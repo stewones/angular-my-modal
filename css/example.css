@@ -9,7 +9,7 @@ div.tab-content h2 { color: #813a6a;}
 @media (max-width: 768px) {
 	div.tab-content {
 		margin-top: 0px;
-		padding: 10px;
+		padding: 7px;
 	}
 }
 .copyright { color: #888; }
