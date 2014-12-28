@@ -88,12 +88,13 @@
                                 <h2 id="install-for-production">Install for production</h2>
 <hr>
 <ul>
-<li>install stpa-modal running the following command on terminal</li>
+<li>install stpa-modal running the following command</li>
 </ul>
 <pre><code class="lang-shell">$ bower install stpa-modal --save
 </code></pre>
 <ul>
-<li><strong>Note:</strong> if you are asked about <code>Unable to find a suitable version for angular</code> - answer <code>angular#1.3.x which is required by stpa-modal</code></li>
+<li><strong>Note:</strong> if you are asked about <code>Unable to find a suitable version for angular</code> - answer <code>angular#1.3.x which is required by stpa-modal</code>.</li>
+<li><strong>Note:</strong> if you are issued about <code>github.com connection timed out</code> just run <code>git config --global url.https://.insteadOf git://</code> in terminal.</li>
 </ul>
 <ul>
 <li>include <code>stpa-modal.min.js</code> on your project. It should be located at <code>bower_components/stpa-modal/src</code></li>
@@ -134,7 +135,10 @@ $ cd stpa-modal
 $ bower install
 </code></pre>
 <ul>
-<li>serve project and do the work</li>
+<li><p><strong>Note:</strong> if you are issued about <code>github.com connection timed out</code> just run <code>git config --global url.https://.insteadOf git://</code> in terminal.</p>
+</li>
+<li><p>serve project and do the work</p>
+</li>
 </ul>
 <pre><code class="lang-sh">$ gulp serve #Note: maybe you should have to use `sudo`
 </code></pre>
@@ -153,10 +157,11 @@ $ bower install
 <p><strong>Note:</strong> running the command <code>gulp serve:dist</code> should generate minified src at <code>src/stpa-modal.min.js</code>, docs on <code>dist/doc</code> folder and serves on <code>http://localhost:3000/doc</code> with minified dependencies.</p>
 <p><strong>Note:</strong> to update project src open an issue, fork the project, do your work, run <code>gulp build</code> and make a pull-request. </p>
 <p><strong>Note:</strong> to update docs run <code>gulp build</code> and make a pull-request into <code>gh-pages</code> branch only with content of <code>dist/doc</code> folder. I like to work with another folder (and repo) just for the docs (pointing to the same remote), maybe you will like also. You can use the <code>build.sh</code> script located in the root to automate the process, but check it before. Also check tasks located on gulp folder for more details.</p>
-<p><br /></p>
 <p>Feel free to open issues if you run into trouble or have suggestions. Pull Requests are always welcome.</p>
-<h2 id="mit-licensed">MIT Licensed</h2>
+<h2 id="license">License</h2>
 <hr>
+<p>The stpa-modal is open-sourced software licensed under the <a href="http://opensource.org/licenses/MIT">MIT</a> license</p>
+<p><a href="https://twitter.com/stewones">@stewones</a></p>
 
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="params" aria-labelledby="params-tab">
