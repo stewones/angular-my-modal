@@ -16,11 +16,10 @@
   "license": "MIT",
   "homepage": "https://stpa.co",
   "private": false,
-  "dependencies": {
-    "angular": "1.3.x",
-    "angular-bootstrap": "~0.12.x"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "angular": "1.3.x",
+    "angular-bootstrap": "~0.12.x",
     "bootstrap": "~3.3.1",
     "angular-bootstrap": "~0.12.x",
     "moment": "~2.8.4"
