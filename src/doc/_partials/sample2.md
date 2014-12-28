@@ -22,10 +22,10 @@ Click here to open a modal with dynamic data-binding
 
 *sample-controller.js*
 ```js
-    function ModalCtrl() {
-        var vm = this, //this way vm is passed to scope by controllerAs syntax with no using of $scope
-            today = moment().format('dddd');
+function ModalCtrl() {
+    var vm = this, //this way vm is passed to scope by controllerAs syntax with no using of $scope
+        today = moment().format('dddd');
 
-        vm.date = today + ((today != 'Friday' && today != 'Saturday' && today != 'Sunday') ? ' =/' : ' =D');
-    }
+    vm.date = today + ((today != 'Friday' && today != 'Saturday' && today != 'Sunday') ? ' =/' : ' =D');
+}
 ```

@@ -1,7 +1,8 @@
  /**
   * stpa-modal provides a reusable way to do modal in AngularJS
+  * check out documentation in http://modal.stpa.co
   *
-  * Copyright © 2014 Stewan Pacheco (stpa.co)
+  * Copyright © 2014 Stewan Pacheco <talk@stpa.co>
   *
   * Permission is hereby granted, free of charge, to any person obtaining a copy
   * of this software and associated documentation files (the “Software”), to deal

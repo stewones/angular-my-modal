@@ -42,7 +42,7 @@ Check out [documentation](https://modal.stpa.co) for more examples
 ## Install for development
 --------------------------
 - install node and bower on your environment
-- cd to your devolpment folder and clone repo
+- cd to your development folder and clone repo
 
 ```sh
 $ git clone https://github.com/stpa-co/stpa-modal.git stpa-modal
@@ -78,18 +78,18 @@ $ gulp build #Note: maybe you should have to use `sudo`
 
 **Note:** running the command `gulp build` should generate minified src at `src/stpa-modal.min.js` and docs on `dist/doc` folder.
 
-**Note:** running the command `gulp serve` should generate minified src at `src/stpa-modal.min.js`, docs on `dist/doc` folder and serves on `http://localhost:3000/doc` with live reload and changes watcher.
+**Note:** running the command `gulp serve` should serve on `http://localhost:3000/doc` with live reload. It also should watch the changes to re-build all the things, generating minified src at `src/stpa-modal.min.js` and docs on `dist/doc` folder.
 
-**Note:** running the command `gulp serve:dist` should generate minified src at `src/stpa-modal.min.js`, docs on `dist/doc` folder and serves on `http://localhost:3000/doc` with minified dependencies.
+**Note:** running the command `gulp serve:dist` should generate minified src at `src/stpa-modal.min.js`, docs on `dist/doc` folder and serves on `http://localhost:3000/doc`, with all minified bower dependencies.
 
-**Note:** to update project src open an issue, fork the project, do your work, run `gulp build` and make a pull-request. 
+**Note:** to update project src open an issue, please fork the project, do your work, run `gulp build` and make a pull-request. thx =D 
 
-**Note:** to update docs run `gulp build` and make a pull-request into `gh-pages` branch only with content of `dist/doc` folder. I like to work with another folder (and repo) just for the docs (pointing to the same remote), maybe you will like also. You can use the `build.sh` script located in the root to automate the process, but check it before. Also check tasks located on gulp folder for more details.
+**Note:** to update docs run `gulp build` and make a pull-request into `gh-pages` branch only with content of `dist/doc` folder. I like to work with another folder (and repo) just for the docs (pointing to the same remote), maybe you will also like. You can use the `build.sh` script located in the root to automate the process, but check it before.
+
+**Note** Check the tasks located on gulp folder for more details.
 
 Feel free to open issues if you run into trouble or have suggestions. Pull Requests are always welcome.
 
 ## License
 ---------------
-The stpa-modal is open-sourced software licensed under the [MIT](http://opensource.org/licenses/MIT) license
-
-[@stewones](https://twitter.com/stewones)
+The `stpa-modal` is open-sourced software licensed under the [MIT](http://opensource.org/licenses/MIT) license. Created by [@stewones](https://twitter.com/stewones)
