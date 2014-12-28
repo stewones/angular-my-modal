@@ -123,7 +123,7 @@
 <hr>
 <ul>
 <li>install node and bower on your environment</li>
-<li>cd to your devolpment folder and clone repo</li>
+<li>cd to your development folder and clone repo</li>
 </ul>
 <pre><code class="lang-sh">$ git clone https://github.com/stpa-co/stpa-modal.git stpa-modal
 $ cd stpa-modal
@@ -153,15 +153,15 @@ $ bower install
 <pre><code class="lang-sh">$ gulp build #Note: maybe you should have to use `sudo`
 </code></pre>
 <p><strong>Note:</strong> running the command <code>gulp build</code> should generate minified src at <code>src/stpa-modal.min.js</code> and docs on <code>dist/doc</code> folder.</p>
-<p><strong>Note:</strong> running the command <code>gulp serve</code> should generate minified src at <code>src/stpa-modal.min.js</code>, docs on <code>dist/doc</code> folder and serves on <code>http://localhost:3000/doc</code> with live reload and changes watcher.</p>
-<p><strong>Note:</strong> running the command <code>gulp serve:dist</code> should generate minified src at <code>src/stpa-modal.min.js</code>, docs on <code>dist/doc</code> folder and serves on <code>http://localhost:3000/doc</code> with minified dependencies.</p>
-<p><strong>Note:</strong> to update project src open an issue, fork the project, do your work, run <code>gulp build</code> and make a pull-request. </p>
-<p><strong>Note:</strong> to update docs run <code>gulp build</code> and make a pull-request into <code>gh-pages</code> branch only with content of <code>dist/doc</code> folder. I like to work with another folder (and repo) just for the docs (pointing to the same remote), maybe you will like also. You can use the <code>build.sh</code> script located in the root to automate the process, but check it before. Also check tasks located on gulp folder for more details.</p>
+<p><strong>Note:</strong> running the command <code>gulp serve</code> should serve on <code>http://localhost:3000/doc</code> with live reload. It also should watch the changes to re-build all the things, generating minified src at <code>src/stpa-modal.min.js</code> and docs on <code>dist/doc</code> folder.</p>
+<p><strong>Note:</strong> running the command <code>gulp serve:dist</code> should generate minified src at <code>src/stpa-modal.min.js</code>, docs on <code>dist/doc</code> folder and serves on <code>http://localhost:3000/doc</code>, with all minified bower dependencies.</p>
+<p><strong>Note:</strong> to update project src open an issue, please fork the project, do your work, run <code>gulp build</code> and make a pull-request. thx =D </p>
+<p><strong>Note:</strong> to update docs run <code>gulp build</code> and make a pull-request into <code>gh-pages</code> branch only with content of <code>dist/doc</code> folder. I like to work with another folder (and repo) just for the docs (pointing to the same remote), maybe you will also like. You can use the <code>build.sh</code> script located in the root to automate the process, but check it before.</p>
+<p><strong>Note</strong> Check the tasks located on gulp folder for more details.</p>
 <p>Feel free to open issues if you run into trouble or have suggestions. Pull Requests are always welcome.</p>
 <h2 id="license">License</h2>
 <hr>
-<p>The stpa-modal is open-sourced software licensed under the <a href="http://opensource.org/licenses/MIT">MIT</a> license</p>
-<p><a href="https://twitter.com/stewones">@stewones</a></p>
+<p>The <code>stpa-modal</code> is open-sourced software licensed under the <a href="http://opensource.org/licenses/MIT">MIT</a> license. Created by <a href="https://twitter.com/stewones">@stewones</a></p>
 
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="params" aria-labelledby="params-tab">
@@ -260,12 +260,12 @@ Click here to open a modal with dynamic data-binding
 &lt;/stpa-modal&gt;
 </code></pre>
 <p><em>sample-controller.js</em></p>
-<pre><code class="lang-js">    function ModalCtrl() {
-        var vm = this, //this way vm is passed to scope by controllerAs syntax with no using of $scope
-            today = moment().format(&#39;dddd&#39;);
+<pre><code class="lang-js">function ModalCtrl() {
+    var vm = this, //this way vm is passed to scope by controllerAs syntax with no using of $scope
+        today = moment().format(&#39;dddd&#39;);
 
-        vm.date = today + ((today != &#39;Friday&#39; &amp;&amp; today != &#39;Saturday&#39; &amp;&amp; today != &#39;Sunday&#39;) ? &#39; =/&#39; : &#39; =D&#39;);
-    }
+    vm.date = today + ((today != &#39;Friday&#39; &amp;&amp; today != &#39;Saturday&#39; &amp;&amp; today != &#39;Sunday&#39;) ? &#39; =/&#39; : &#39; =D&#39;);
+}
 </code></pre>
 
                             </div>
@@ -304,12 +304,12 @@ Click here to open a modal with custom template
 &lt;/div&gt;
 </code></pre>
 <p><em>sample-controller.js</em></p>
-<pre><code class="lang-js">    function ModalCtrl() {
-        var vm = this, //this way vm is passed to scope by controllerAs syntax with no using of $scope
-            today = moment().format(&#39;dddd&#39;);
+<pre><code class="lang-js">function ModalCtrl() {
+    var vm = this, //this way vm is passed to scope by controllerAs syntax with no using of $scope
+        today = moment().format(&#39;dddd&#39;);
 
-        vm.date = today + (today == &#39;Friday&#39; ? &#39; =D&#39; : &#39; =/&#39;);
-    }
+    vm.date = today + (today == &#39;Friday&#39; ? &#39; =D&#39; : &#39; =/&#39;);
+}
 </code></pre>
 
                             </div>
