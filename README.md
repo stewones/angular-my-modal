@@ -57,6 +57,7 @@ $ bower install
 ```
 
 - **Note:** if you are issued about `github.com connection timed out` just run `git config --global url.https://.insteadOf git://` in terminal.
+
 - serve project and do the work
 
 ```sh
