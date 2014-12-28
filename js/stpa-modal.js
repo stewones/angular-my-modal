@@ -95,16 +95,16 @@
          function ok(e) {
              $modalInstance.close();
              $rootScope.$emit('StpaModalOkCallback', e);
-             e.stopPropagation();
+             if (e) e.stopPropagation();
          };
 
          function cancel(e) {
              $modalInstance.dismiss('cancel');
              $rootScope.$emit('StpaModalCancelCallback', e);
-             e.stopPropagation();
+             if (e) e.stopPropagation();
          };
 
-         //events
+         //events trigger
          $rootScope.$on('StpaModalOk', function() {
              ok();
          });
