@@ -28,6 +28,7 @@ gulp.task('build:serve', [
     'cname',
     'stpa-modal-min',
     'stpa-modal-copy',
+    'stpa-doc-readme',
     'stpa-sample-template',
     'stpa-clean-partials'
 ]);
@@ -48,6 +49,12 @@ gulp.task('stpa-modal-min', ['wiredep', 'markdown'], function() {
 gulp.task('stpa-modal-copy', ['stpa-modal-min'], function() {
     return gulp.src(['src/stpa-modal.js', 'src/stpa-modal.min.js'])
         .pipe(gulp.dest('dist/doc/js'));
+});
+
+gulp.task('stpa-doc-readme', ['stpa-modal-copy'], function() {
+    return gulp.src(['src/doc/_partials/install.md'])
+        .pipe($.rename("README.md"))
+        .pipe(gulp.dest('./'));
 });
 
 gulp.task('markdown', ['wiredep'], function() {

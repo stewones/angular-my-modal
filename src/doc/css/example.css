@@ -2,12 +2,29 @@ a.logo { padding: 0 !important; }
 a.logo img { max-width: 140px !important; margin-bottom: -36px; }
 a.logo:hover { background: transparent !important; opacity: .5}
 a.logo:active { background: transparent !important; }
-pre { background-color: #f8f8f8; }
+pre { }
+
+pre {
+padding: 16px;
+margin: 0 0 16px;
+font-size: 13px;
+line-height: 1.45;
+background-color: #f8f8f8; 
+border: none;
+border-radius: 4px;
+}
+
+
 ul.nav h1 { font-size: 26px; }
-div.tab-content { padding: 35px; margin-top: 40px; }
-div.tab-content h2 { color: #813a6a;}
+
+.tab-content { padding: 35px; margin-top: 40px; }
+.tab-content h2 { color: #813a6a;}
+.tab-content ul { margin: 10px 0 14px;}
+.tab-content ul li { margin: 10px 0;}
+.tab-content p { margin: 0 0 16px;}
+
 @media (max-width: 768px) {
-	div.tab-content {
+	.tab-content {
 		margin-top: 0px;
 		padding: 7px;
 	}

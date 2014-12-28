@@ -1,12 +1,13 @@
 ## Install for production
 -------------------------
-- install stpa-modal running the following command on terminal
+- install stpa-modal running the following command
 
 ```shell
 $ bower install stpa-modal --save
 ```
 
-- **Note:** if you are asked about `Unable to find a suitable version for angular` - answer `angular#1.3.x which is required by stpa-modal`
+- **Note:** if you are asked about `Unable to find a suitable version for angular` - answer `angular#1.3.x which is required by stpa-modal`.
+- **Note:** if you are issued about `github.com connection timed out` just run `git config --global url.https://.insteadOf git://` in terminal.
 
 
 - include `stpa-modal.min.js` on your project. It should be located at `bower_components/stpa-modal/src`
@@ -24,6 +25,8 @@ angular.module('my.app', [
 ])
 ```
 
+<br />
+
 ## Usage
 --------
 
@@ -34,7 +37,7 @@ angular.module('my.app', [
 ```
 
 Check out [documentation](https://modal.stpa.co) for more examples
-
+<br />
 
 ## Install for development
 --------------------------
@@ -53,6 +56,7 @@ $ npm install
 $ bower install
 ```
 
+- **Note:** if you are issued about `github.com connection timed out` just run `git config --global url.https://.insteadOf git://` in terminal.
 - serve project and do the work
 
 ```sh
@@ -83,6 +87,8 @@ $ gulp build #Note: maybe you should have to use `sudo`
 
 Feel free to open issues if you run into trouble or have suggestions. Pull Requests are always welcome.
 
-## MIT Licensed
+## License
 ---------------
+The stpa-modal is open-sourced software licensed under the [MIT](http://opensource.org/licenses/MIT) license
+
 [@stewones](https://twitter.com/stewones)
