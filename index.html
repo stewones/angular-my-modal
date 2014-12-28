@@ -57,7 +57,7 @@
                                     <li><a href="#sample3" tabindex="-1" role="tab" id="sample3-tab" data-toggle="tab" aria-controls="sample3">Sample 3</a></li>
                                 </ul>
                             </li>
-                            <li role="presentation" class="active">
+                            <li role="presentation">
                             <a href="#install" id="install-tab" role="tab" data-toggle="tab" aria-controls="install" aria-expanded="true">Install</a></li>
                             <li role="presentation" class="">
                             <a href="#params" role="tab" id="params-tab" data-toggle="tab" aria-controls="params" aria-expanded="false">Params</a></li>
@@ -84,7 +84,7 @@
                             </li>
                         </ul>
                         <div id="" class="tab-content col-sm-10">
-                            <div role="tabpanel" class="tab-pane fade active in" id="install" aria-labelledby="install-tab">
+                            <div role="tabpanel" class="tab-pane fade" id="install" aria-labelledby="install-tab">
                                 <h2 id="install-for-production">Install for production</h2>
 <hr>
 <ul>
@@ -165,7 +165,7 @@ $ bower install
 
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="params" aria-labelledby="params-tab">
-                                <h2 id="directive-accepts-the-following-params">directive accepts the following params</h2>
+                                <h2 id="directive-accepts-the-following-params">Directive accepts the following params</h2>
 <hr>
 <pre><code class="lang-js">{
     name: &#39;&#39;, //default &quot;My stpa-modal&quot;
@@ -181,14 +181,14 @@ $ bower install
 
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="markup" aria-labelledby="markup-tab">
-                                <h2 id="template-markup-for-directive">template markup for directive</h2>
+                                <h2 id="template-markup-for-directive">Template markup for directive</h2>
 <hr>
 <pre><code class="lang-html">{{ vm.templateMarkup }}
 </code></pre>
 
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="callback" aria-labelledby="callback-tab">
-                                <h2 id="callbacks">callbacks</h2>
+                                <h2 id="callbacks">Callbacks</h2>
 <hr>
 <p><em>sample-controller.js - callback modal accept</em></p>
 <pre><code class="lang-js">    function ModalCtrl($rootScope) {
@@ -207,7 +207,7 @@ $ bower install
 
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="event" aria-labelledby="event-tab">
-                                <h2 id="events">events</h2>
+                                <h2 id="events">Events</h2>
 <hr>
 <p><em>sample-controller.js - trigger modal accept</em></p>
 <pre><code class="lang-js">    function ModalCtrl($rootScope) {
@@ -221,7 +221,7 @@ $ bower install
 </code></pre>
 
                             </div>
-                            <div role="tabpanel" class="tab-pane fade" id="sample1" aria-labelledby="sample1-tab">
+                            <div role="tabpanel" class="tab-pane fade active in" id="sample1" aria-labelledby="sample1-tab">
                                 <h2 id="sample-1-simple-modal">Sample 1 - Simple modal</h2>
 <hr>
 <p><stpa-modal
