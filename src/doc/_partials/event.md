@@ -1,4 +1,4 @@
-## events
+## Events
 ---------
 
 *sample-controller.js - trigger modal accept*

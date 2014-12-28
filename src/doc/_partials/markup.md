@@ -1,4 +1,4 @@
-## template markup for directive
+## Template markup for directive
 --------------------------------
 
 ```html

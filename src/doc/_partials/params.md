@@ -1,4 +1,4 @@
-## directive accepts the following params
+## Directive accepts the following params
 -----------------------------------------
 
 ```js

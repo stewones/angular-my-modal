@@ -1,4 +1,4 @@
-## callbacks
+## Callbacks
 ------------
 
 *sample-controller.js - callback modal accept*
