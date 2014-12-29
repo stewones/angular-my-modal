@@ -190,17 +190,17 @@ $ bower install
                             <div role="tabpanel" class="tab-pane fade" id="callback" aria-labelledby="callback-tab">
                                 <h2 id="callbacks">Callbacks</h2>
 <hr>
-<p><em>sample-controller.js - callback modal accept</em></p>
+<p><em>sample-controller.js - receives an accept modal callback</em></p>
 <pre><code class="lang-js">    function ModalCtrl($rootScope) {
-        $rootScope.$on(&#39;StpaModalOkCallback&#39;,function(){
-            alert(&#39;Ok Pressed&#39;);
+        $rootScope.$on(&#39;StpaModalAccepted&#39;,function(){
+            alert(&#39;Yay, ok button pressed =D&#39;);
         });
     }
 </code></pre>
-<p><em>sample-controller.js - callback modal cancel</em></p>
+<p><em>sample-controller.js - receives a cancel modal callback</em></p>
 <pre><code class="lang-js">    function ModalCtrl($rootScope) {
-        $rootScope.$on(&#39;StpaModalCancelCallback&#39;,function(){
-            alert(&#39;Cancel Pressed&#39;);
+        $rootScope.$on(&#39;StpaModalCanceled&#39;,function(){
+            alert(&#39;Ops, cancel button pressed =/&#39;);
         });
     }
 </code></pre>
@@ -209,12 +209,12 @@ $ bower install
                             <div role="tabpanel" class="tab-pane fade" id="event" aria-labelledby="event-tab">
                                 <h2 id="events">Events</h2>
 <hr>
-<p><em>sample-controller.js - trigger modal accept</em></p>
+<p><em>sample-controller.js - trigger an accept modal action</em></p>
 <pre><code class="lang-js">    function ModalCtrl($rootScope) {
-        $rootScope.$emit(&#39;StpaModalOk&#39;);
+        $rootScope.$emit(&#39;StpaModalAccept&#39;);
     }
 </code></pre>
-<p><em>sample-controller.js - trigger modal cancel</em></p>
+<p><em>sample-controller.js - trigger a cancel modal action</em></p>
 <pre><code class="lang-js">    function ModalCtrl($rootScope) {
         $rootScope.$emit(&#39;StpaModalCancel&#39;);
     }
@@ -227,14 +227,14 @@ $ bower install
 <p><stpa-modal
 name="My Beautiful Modal"
 body-class="my-body-class"
-body="Hello World!"
+body="<h1>Hello World!</h1><hr />I'm a modal. Looks good?"
 size="lg"><br>Click here to open a simple modal
 </stpa-modal></p>
 <p><em>sample-directive.html</em></p>
 <pre><code class="lang-html">&lt;stpa-modal
 name=&quot;My Beautiful Modal&quot;
 body-class=&quot;my-body-class&quot;
-body=&quot;Hello World!&quot;
+body=&quot;&lt;h1&gt;Hello World!&lt;/h1&gt;&lt;hr /&gt;I&#39;m a modal. Looks good?&quot;
 size=&quot;lg&quot;&gt;                     
 Click here to open a simple modal
 &lt;/stpa-modal&gt;
@@ -245,16 +245,16 @@ Click here to open a simple modal
                                 <h2 id="sample-2-modal-with-dynamic-data-binding">Sample 2 - Modal with dynamic data-binding</h2>
 <hr>
 <p><stpa-modal
-name="My Day Modal"
+name="My Beautiful Day Modal"
 body-class="my-body-class"
-body="Hello World! Today is <strong>{{vm.date}}</strong>"
+body="<h1>Hello World!</h1><hr />I'm a modal. Today is <strong>{{vm.date}}</strong>"
 size="lg"><br>Click here to open a modal with dynamic data-binding
 </stpa-modal></p>
 <p><em>sample-directive.html</em></p>
 <pre><code class="lang-html">&lt;stpa-modal
-name=&quot;My Day Modal&quot;
+name=&quot;My Beautiful Day Modal&quot;
 body-class=&quot;my-body-class&quot;
-body=&quot;Hello World! Today is &lt;strong&gt;{{vm.dateLabel}}&lt;/strong&gt;&quot;
+body=&quot;&lt;h1&gt;Hello World!&lt;/h1&gt;&lt;hr /&gt;I&#39;m a modal. Today is &lt;strong&gt;{{vm.dateLabel}}&lt;/strong&gt;&quot;
 size=&quot;lg&quot;&gt;                     
 Click here to open a modal with dynamic data-binding
 &lt;/stpa-modal&gt;
@@ -274,7 +274,6 @@ Click here to open a modal with dynamic data-binding
 <hr>
 <p><stpa-modal
 name="My Modal With Template"
-body-class="my-body-class"
 template="sample-template.html"
 scope="vm"
 size="lg"><br>Click here to open a modal with custom template
@@ -282,7 +281,6 @@ size="lg"><br>Click here to open a modal with custom template
 <p><em>sample-directive.html</em></p>
 <pre><code class="lang-html">&lt;stpa-modal
 name=&quot;My Modal With Template&quot;
-body-class=&quot;my-body-class&quot;
 template=&quot;sample-template.html&quot;
 scope=&quot;vm&quot;
 size=&quot;lg&quot;&gt;                     
@@ -293,13 +291,13 @@ Click here to open a modal with custom template
 <pre><code class="lang-html">&lt;div class=&quot;modal-header&quot;&gt;
     &lt;h3 class=&quot;modal-title&quot;&gt;{{vm.templateSettingNameLabel}}&lt;/h3&gt;
 &lt;/div&gt;
-&lt;div class=&quot;modal-body change-template&quot;&gt;
+&lt;div class=&quot;modal-body my-own-template-class&quot;&gt;
 &lt;p&gt;do your best here&lt;/p&gt;
 &lt;p&gt;hello world, today is &lt;strong&gt;{{vm.templateDateLabel}}&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;you can pass custom objects to template by the scope param in directive&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;modal-footer&quot;&gt;
-    &lt;button class=&quot;btn btn-primary&quot; ng-click=&quot;StpaModalCtrl.ok()&quot;&gt;OK&lt;/button&gt;
+    &lt;button class=&quot;btn btn-primary&quot; ng-click=&quot;StpaModalCtrl.accept()&quot;&gt;OK&lt;/button&gt;
     &lt;button class=&quot;btn btn-warning&quot; ng-click=&quot;StpaModalCtrl.cancel()&quot;&gt;Cancel&lt;/button&gt;
 &lt;/div&gt;
 </code></pre>
@@ -353,7 +351,7 @@ Click here to open a modal with custom template
         </div>
         <script src="https://cdn.jsdelivr.net/highlight.js/8.4.0/highlight.min.js"></script>
         <script src="js/vendor-e4216363.js"></script>
-        <script src="./js/stpa-modal.min.js"></script>
+        <script src="./js/stpa-modal.js"></script>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <script src="https://buttons.github.io/buttons.js" async defer id="github-bjs"></script>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>

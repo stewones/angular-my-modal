@@ -50,12 +50,14 @@
          vm.templateMarkup += ' <h3 class="modal-title">{{StpaModalCtrl.setting.name}}</h3>' + '\n';
          vm.templateMarkup += '</div>' + '\n';
          vm.templateMarkup += '<div class="modal-body change-template">' + '\n';
-         vm.templateMarkup += '<p>do your best here</p>' + '\n';
-         vm.templateMarkup += '<p>use {{StpaModalCtrl.scope.myCustomObject}} to call your own objects</p>' + '\n';
-         vm.templateMarkup += '<p>you will need pass the object "myCustomObject" by the scope param in directive</p>' + '\n';
+         vm.templateMarkup += '<h1>Hello World!</h1>'+ '\n';
+         vm.templateMarkup += '<hr />'+ '\n';
+         vm.templateMarkup += "<p>I'm a modal. Looks good? do your best here</p>"+ '\n';
+         vm.templateMarkup += '<p>today is <strong>{{StpaModalCtrl.scope.date}}</strong>.</p>'+ '\n';
+         vm.templateMarkup += '<p>you can pass custom objects to template by the scope param in directive</p>'+ '\n';
          vm.templateMarkup += '</div>' + '\n';
          vm.templateMarkup += '<div class="modal-footer">' + '\n';
-         vm.templateMarkup += ' <button class="btn btn-primary" ng-click="StpaModalCtrl.ok($event)">OK</button>' + '\n';
+         vm.templateMarkup += ' <button class="btn btn-primary" ng-click="StpaModalCtrl.accept($event)">OK</button>' + '\n';
          vm.templateMarkup += ' <button class="btn btn-warning" ng-click="StpaModalCtrl.cancel($event)">Cancel</button>' + '\n';
          vm.templateMarkup += '</div>';
 
@@ -69,11 +71,13 @@
          }, 1000);
 
          $rootScope.$on('StpaModalOkCallback', function() {
-             alert('Ok Pressed');
+             alert('Yay, ok button pressed =D');
+             //alert('Ok Pressed');
          });
 
          $rootScope.$on('StpaModalCancelCallback', function() {
-             alert('Cancel Pressed');
+             alert('Ops, cancel button pressed =/');
+             //alert('Cancel Pressed');
          });
      }
  })();
