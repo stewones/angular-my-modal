@@ -1,14 +1,14 @@
 ## Events
 ---------
 
-*sample-controller.js - trigger modal accept*
+*sample-controller.js - trigger an accept modal action*
 ```js
     function ModalCtrl($rootScope) {
-        $rootScope.$emit('StpaModalOk');
+        $rootScope.$emit('StpaModalAccept');
     }    
 ```
 
-*sample-controller.js - trigger modal cancel*
+*sample-controller.js - trigger a cancel modal action*
 ```js
     function ModalCtrl($rootScope) {
         $rootScope.$emit('StpaModalCancel');

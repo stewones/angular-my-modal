@@ -2,9 +2,9 @@
 ---------------------------------------------
 
 <stpa-modal
-name="My Day Modal"
+name="My Beautiful Day Modal"
 body-class="my-body-class"
-body="Hello World! Today is <strong>{{vm.date}}</strong>"
+body="<h1>Hello World!</h1><hr />I'm a modal. Today is <strong>{{vm.date}}</strong>"
 size="lg">                     
 Click here to open a modal with dynamic data-binding
 </stpa-modal>
@@ -12,9 +12,9 @@ Click here to open a modal with dynamic data-binding
 *sample-directive.html*
 ```html
 <stpa-modal
-name="My Day Modal"
+name="My Beautiful Day Modal"
 body-class="my-body-class"
-body="Hello World! Today is <strong>{{vm.dateLabel}}</strong>"
+body="<h1>Hello World!</h1><hr />I'm a modal. Today is <strong>{{vm.dateLabel}}</strong>"
 size="lg">                     
 Click here to open a modal with dynamic data-binding
 </stpa-modal>

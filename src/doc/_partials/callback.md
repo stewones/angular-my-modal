@@ -1,19 +1,19 @@
 ## Callbacks
 ------------
 
-*sample-controller.js - callback modal accept*
+*sample-controller.js - receives an accept modal callback*
 ```js
     function ModalCtrl($rootScope) {
-        $rootScope.$on('StpaModalOkCallback',function(){
-            alert('Ok Pressed');
+        $rootScope.$on('StpaModalAccepted',function(){
+            alert('Yay, ok button pressed =D');
         });
     }    
 ```
-*sample-controller.js - callback modal cancel*
+*sample-controller.js - receives a cancel modal callback*
 ```js
     function ModalCtrl($rootScope) {
-        $rootScope.$on('StpaModalCancelCallback',function(){
-            alert('Cancel Pressed');
+        $rootScope.$on('StpaModalCanceled',function(){
+            alert('Ops, cancel button pressed =/');
         });
     }
 ```

@@ -3,7 +3,6 @@
 
 <stpa-modal
 name="My Modal With Template"
-body-class="my-body-class"
 template="sample-template.html"
 scope="vm"
 size="lg">                     
@@ -14,7 +13,6 @@ Click here to open a modal with custom template
 ```html
 <stpa-modal
 name="My Modal With Template"
-body-class="my-body-class"
 template="sample-template.html"
 scope="vm"
 size="lg">                     
@@ -27,13 +25,13 @@ Click here to open a modal with custom template
 <div class="modal-header">
     <h3 class="modal-title">{{vm.templateSettingNameLabel}}</h3>
 </div>
-<div class="modal-body change-template">
+<div class="modal-body my-own-template-class">
 <p>do your best here</p>
 <p>hello world, today is <strong>{{vm.templateDateLabel}}</strong>.</p>
 <p>you can pass custom objects to template by the scope param in directive</p>
 </div>
 <div class="modal-footer">
-    <button class="btn btn-primary" ng-click="StpaModalCtrl.ok()">OK</button>
+    <button class="btn btn-primary" ng-click="StpaModalCtrl.accept()">OK</button>
     <button class="btn btn-warning" ng-click="StpaModalCtrl.cancel()">Cancel</button>
 </div>
 ```

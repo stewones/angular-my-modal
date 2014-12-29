@@ -24,8 +24,8 @@
   */
  "use strict";
  (function() {
-     var mod = angular.module("stpa.modal", []);
-     mod.directive('stpaModal', function($modal) {
+     var module = angular.module("stpa.modal", []);
+     module.directive('stpaModal', function($modal) {
          return {
              transclude: true,
              restrict: 'EA',
@@ -52,7 +52,7 @@
                              html += attrs.body;
                              html += '</div>';
                              html += '<div class="modal-footer">';
-                             html += '<button class="btn btn-primary" ng-click="StpaModalCtrl.ok($event)">OK</button>';
+                             html += '<button class="btn btn-primary" ng-click="StpaModalCtrl.accept($event)">OK</button>';
                              html += '<!-- <button class="btn btn-warning" ng-click="StpaModalCtrl.cancel($event)">Cancel</button> -->';
                              html += '</div>';
                              return html;
@@ -78,40 +78,62 @@
                      modalInstance.result.then(function() {
                          //console.log('success');
                      }, function() {
-                         //console.log('error : ' + new Date());
+                         //console.log('error');
                      });
                  };
              }
          };
      });
 
-     mod.controller('StpaModalCtrl', function($scope, $rootScope, $modalInstance, modalSetting, modalScope) {
+     module.controller('StpaModalCtrl', function($scope, $rootScope, $modalInstance, modalSetting, modalScope) {
          var that = this;
          that.setting = modalSetting;
          that.scope = modalScope;
-         that.ok = ok;
+         that.accept = accept;
          that.cancel = cancel;
 
-         //callback
-         function ok(e) {
+         //////////////////////
+         // callback trigger //
+         //////////////////////
+
+         function accept(e) {
              $modalInstance.close();
+             //@new callback
+             $rootScope.$emit('StpaModalAccepted', e);
+             //@deprecated
+             //will be removed shortly
              $rootScope.$emit('StpaModalOkCallback', e);
              if (e) e.stopPropagation();
          };
-
          function cancel(e) {
              $modalInstance.dismiss('cancel');
+             //@new callback
+             $rootScope.$emit('StpaModalCanceled', e);
+             //@deprecated
+             //will be removed shortly
              $rootScope.$emit('StpaModalCancelCallback', e);
              if (e) e.stopPropagation();
          };
 
-         //events trigger
-         $rootScope.$on('StpaModalOk', function() {
-             ok();
-         });
+         ///////////////////
+         // event trigger //
+         ///////////////////
 
+         $rootScope.$on('StpaModalAccept', function() {
+             accept();
+         });
          $rootScope.$on('StpaModalCancel', function() {
              cancel();
+         });
+
+         /////////////////////////////
+         //   deprecated methods    //
+         // will be removed shortly //
+         /////////////////////////////     
+         
+         that.ok = accept;
+         $rootScope.$on('StpaModalOk', function() {
+             accept();
          });
      });
  })();
