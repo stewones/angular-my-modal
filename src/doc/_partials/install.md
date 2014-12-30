@@ -6,9 +6,8 @@
 $ bower install stpa-modal --save
 ```
 
-- **Note:** if you are asked about `Unable to find a suitable version for angular` - answer `angular#1.3.x which is required by stpa-modal`.
+- **Note:** if you are asked about `Unable to find a suitable version for angular` answer `angular#1.3.x which is required by stpa-modal`.
 - **Note:** if you are issued about `github.com connection timed out` just run `git config --global url.https://.insteadOf git://` in terminal.
-
 
 - include `stpa-modal.min.js` on your project. It should be located at `bower_components/stpa-modal/src`
 
@@ -25,7 +24,6 @@ angular.module('my.app', [
 ])
 ```
 
-<br />
 
 ## Usage
 --------
@@ -33,11 +31,10 @@ angular.module('my.app', [
 - insert `<stpa-modal></stpa-modal>` directive into your template
 
 ```html
-<stpa-modal body="Hello World!">Open Modal</stpa-modal>
+<stpa-modal body="<h1>Hello World!</h1>">Open Modal</stpa-modal>
 ```
 
 Check out [documentation](https://modal.stpa.co) for more examples
-<br />
 
 ## Install for development
 --------------------------
@@ -76,19 +73,19 @@ $ gulp serve:dist #Note: maybe you should have to use `sudo`
 $ gulp build #Note: maybe you should have to use `sudo`
 ```
 
-**Note:** running the command `gulp build` should generate minified src at `src/stpa-modal.min.js` and docs on `dist/doc` folder.
+**Note:** running the command `gulp build` should generate minified src at `src/stpa-modal.min.js`, and the docs on `dist/doc` folder.
 
-**Note:** running the command `gulp serve` should serve on `http://localhost:3000/doc` with live reload. It also should watch the changes to re-build all the things, generating minified src at `src/stpa-modal.min.js` and docs on `dist/doc` folder.
+**Note:** running the command `gulp serve` should serve on `http://localhost:3000/doc` with live reload. It also should watch the changes to re-build all the things, generating minified src at `src/stpa-modal.min.js`, and docs on `dist/doc` folder.
 
-**Note:** running the command `gulp serve:dist` should do the same above but with all minified bower dependencies.
+**Note:** running the command `gulp serve:dist` should do the same above but with all bower dependencies minified.
 
 **Note:** to update project src please open an issue, fork the project, do your work, run `gulp build` and make a pull-request. thx =D 
 
-**Note:** to update docs run `gulp build` and make a pull-request into `gh-pages` branch only with content of `dist/doc` folder. I like to work with another folder just for the docs (pointing to the same remote), maybe you will also like. You can use the `build.sh` script located in the root to automate the process, but check it before.
+**Note:** to update docs just run `gulp build` or `./buil.sh`, and make a pull-request into `gh-pages` branch only with contents of `dist/doc` folder. I like to work with another folder only for the docs (pointing to the same remote), maybe you will also. You can use the `build.sh` script located in the root to automate the process, but check it before.
 
-**Note** Check the tasks located on gulp folder for more details.
+**Note** Also check the tasks located on gulp folder for more details.
 
-Feel free to open issues if you run into trouble or have suggestions. Pull Requests are always welcome.
+Feel free to open issues if you run into a problem or if you just have suggestions. Pull Requests are always welcome.
 
 ## License
 ---------------
