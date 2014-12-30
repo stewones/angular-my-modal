@@ -27,14 +27,16 @@
         Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
     </p>
 <![endif]-->
-        <a href="https://github.com/stpa-co/stpa-modal"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
+        <a href="https://github.com/stpa-co/stpa-modal">
+            <img style="position: absolute; top: 0; right: 0; border: 0; z-index:9999" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png">
+        </a>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
                         <ul class="nav tabs-vertical col-sm-2" role="tablist">
                             <li class="text-center">
-                                <a href="https://stpa.co" class="logo">
+                                <a href="http://stpa.co" class="logo">
                                 <img src="https://stpa.co/assets/images/stpa-symbol.png">
                                 </a>
                                 <h1>stpa-modal</h1>
@@ -93,11 +95,11 @@
 <pre><code class="lang-shell">$ bower install stpa-modal --save
 </code></pre>
 <ul>
-<li><strong>Note:</strong> if you are asked about <code>Unable to find a suitable version for angular</code> - answer <code>angular#1.3.x which is required by stpa-modal</code>.</li>
-<li><strong>Note:</strong> if you are issued about <code>github.com connection timed out</code> just run <code>git config --global url.https://.insteadOf git://</code> in terminal.</li>
-</ul>
-<ul>
-<li>include <code>stpa-modal.min.js</code> on your project. It should be located at <code>bower_components/stpa-modal/src</code></li>
+<li><strong>Note:</strong> if you are asked about <code>Unable to find a suitable version for angular</code> answer <code>angular#1.3.x which is required by stpa-modal</code>.</li>
+<li><p><strong>Note:</strong> if you are issued about <code>github.com connection timed out</code> just run <code>git config --global url.https://.insteadOf git://</code> in terminal.</p>
+</li>
+<li><p>include <code>stpa-modal.min.js</code> on your project. It should be located at <code>bower_components/stpa-modal/src</code></p>
+</li>
 </ul>
 <pre><code class="lang-html">&lt;script src=&quot;../bower_components/stpa-modal/src/stpa-modal.min.js&quot;&gt;&lt;/script&gt;
 </code></pre>
@@ -109,16 +111,14 @@
     &#39;ui.bootstrap&#39;
 ])
 </code></pre>
-<p><br /></p>
 <h2 id="usage">Usage</h2>
 <hr>
 <ul>
 <li>insert <code>&lt;stpa-modal&gt;&lt;/stpa-modal&gt;</code> directive into your template</li>
 </ul>
-<pre><code class="lang-html">&lt;stpa-modal body=&quot;Hello World!&quot;&gt;Open Modal&lt;/stpa-modal&gt;
+<pre><code class="lang-html">&lt;stpa-modal body=&quot;&lt;h1&gt;Hello World!&lt;/h1&gt;&quot;&gt;Open Modal&lt;/stpa-modal&gt;
 </code></pre>
-<p>Check out <a href="https://modal.stpa.co">documentation</a> for more examples
-<br /></p>
+<p>Check out <a href="https://modal.stpa.co">documentation</a> for more examples</p>
 <h2 id="install-for-development">Install for development</h2>
 <hr>
 <ul>
@@ -152,13 +152,13 @@ $ bower install
 </ul>
 <pre><code class="lang-sh">$ gulp build #Note: maybe you should have to use `sudo`
 </code></pre>
-<p><strong>Note:</strong> running the command <code>gulp build</code> should generate minified src at <code>src/stpa-modal.min.js</code> and docs on <code>dist/doc</code> folder.</p>
-<p><strong>Note:</strong> running the command <code>gulp serve</code> should serve on <code>http://localhost:3000/doc</code> with live reload. It also should watch the changes to re-build all the things, generating minified src at <code>src/stpa-modal.min.js</code> and docs on <code>dist/doc</code> folder.</p>
-<p><strong>Note:</strong> running the command <code>gulp serve:dist</code> should do the same above but with all minified bower dependencies.</p>
+<p><strong>Note:</strong> running the command <code>gulp build</code> should generate minified src at <code>src/stpa-modal.min.js</code>, and the docs on <code>dist/doc</code> folder.</p>
+<p><strong>Note:</strong> running the command <code>gulp serve</code> should serve on <code>http://localhost:3000/doc</code> with live reload. It also should watch the changes to re-build all the things, generating minified src at <code>src/stpa-modal.min.js</code>, and docs on <code>dist/doc</code> folder.</p>
+<p><strong>Note:</strong> running the command <code>gulp serve:dist</code> should do the same above but with all bower dependencies minified.</p>
 <p><strong>Note:</strong> to update project src please open an issue, fork the project, do your work, run <code>gulp build</code> and make a pull-request. thx =D </p>
-<p><strong>Note:</strong> to update docs run <code>gulp build</code> and make a pull-request into <code>gh-pages</code> branch only with content of <code>dist/doc</code> folder. I like to work with another folder just for the docs (pointing to the same remote), maybe you will also like. You can use the <code>build.sh</code> script located in the root to automate the process, but check it before.</p>
-<p><strong>Note</strong> Check the tasks located on gulp folder for more details.</p>
-<p>Feel free to open issues if you run into trouble or have suggestions. Pull Requests are always welcome.</p>
+<p><strong>Note:</strong> to update docs just run <code>gulp build</code> or <code>./buil.sh</code>, and make a pull-request into <code>gh-pages</code> branch only with contents of <code>dist/doc</code> folder. I like to work with another folder only for the docs (pointing to the same remote), maybe you will also. You can use the <code>build.sh</code> script located in the root to automate the process, but check it before.</p>
+<p><strong>Note</strong> Also check the tasks located on gulp folder for more details.</p>
+<p>Feel free to open issues if you run into a problem or if you just have suggestions. Pull Requests are always welcome.</p>
 <h2 id="license">License</h2>
 <hr>
 <p>The <code>stpa-modal</code> is open-sourced software licensed under the <a href="http://opensource.org/licenses/MIT">MIT</a> license. Created by <a href="https://twitter.com/stewones">@stewones</a></p>
