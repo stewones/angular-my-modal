@@ -35,8 +35,8 @@
             restrict: 'EA',
             template: '<a ng-click="open()" ng-transclude></a>',
             scope: {
-                controller: "@",
-                controllerAs: "@",
+                //controller: "@",
+                //controllerAs: "@",
                 name: "@",
                 size: "@",
                 scope: "=scope",
@@ -80,9 +80,9 @@
                     });
 
                     modalInstance.result.then(function() {
-                        //console.log('success');
+                        //console.debug('success');
                     }, function() {
-                        //console.log('error');
+                        //console.debug('error');
                     });
                 };
             }
@@ -102,7 +102,7 @@
         //////////////////////
 
         function accept(e) {
-            $modalInstance.close();    
+            $modalInstance.close();
             $rootScope.$emit('StpaModalAccepted', e);
             if (e) e.stopPropagation();
         };

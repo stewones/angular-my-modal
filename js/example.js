@@ -41,8 +41,25 @@
 
          vm.date = today + ((today != 'Friday' && today != 'Saturday' && today != 'Sunday') ? ' =/' : ' =D');
 
+         //mock many rows for sample 4
+         var sample4 = [];
+         for (var i = 1; i <= 100; i++) {
+             sample4.push({
+                 'id': i,
+                 'lorem': 'ipsum ' + i,
+                 'date': moment().add(i, 'days').calendar()
+             });
+         };
+
+         vm.sample4 = sample4;
+
          //small hack because i cant stop angular parsers on specific blocks
+         vm.sample4ItemId = '{{item.id}}';
+         vm.sample4ItemLorem = '{{item.lorem}}';
+         vm.sample4ItemDate = '{{item.date}}';
+
          vm.dateLabel = '{{vm.date}}';
+
          vm.templateDateLabel = '{{StpaModalCtrl.scope.date}}';
          vm.templateSettingNameLabel = '{{StpaModalCtrl.setting.name}}';
          vm.templateMarkup = '';
@@ -50,11 +67,11 @@
          vm.templateMarkup += '   <h3 class="modal-title">{{StpaModalCtrl.setting.name}}</h3>' + '\n';
          vm.templateMarkup += '</div>' + '\n' + '\n';
          vm.templateMarkup += '<div class="modal-body change-template">' + '\n';
-         vm.templateMarkup += '   <h1>Hello World!</h1>'+ '\n';
-         vm.templateMarkup += '   <hr />'+ '\n';
-         vm.templateMarkup += "   <p>I'm a modal. Looks good? do your best here</p>"+ '\n';
-         vm.templateMarkup += '   <p>today is <strong>{{StpaModalCtrl.scope.date}}</strong>.</p>'+ '\n';
-         vm.templateMarkup += '   <p>you can pass custom objects to template by the scope param in directive</p>'+ '\n';
+         vm.templateMarkup += '   <h1>Hello World!</h1>' + '\n';
+         vm.templateMarkup += '   <hr />' + '\n';
+         vm.templateMarkup += "   <p>I'm a modal. Looks good? do your best here</p>" + '\n';
+         vm.templateMarkup += '   <p>today is <strong>{{StpaModalCtrl.scope.date}}</strong>.</p>' + '\n';
+         vm.templateMarkup += '   <p>you can pass custom objects to template by the scope param in directive</p>' + '\n';
          vm.templateMarkup += '</div>' + '\n' + '\n';
          vm.templateMarkup += '<div class="modal-footer">' + '\n';
          vm.templateMarkup += ' <button class="btn btn-primary" ng-click="StpaModalCtrl.accept($event)">OK</button>' + '\n';

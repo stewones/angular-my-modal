@@ -7,7 +7,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="stpa.co" />
         <meta name="robots" content="index, follow"/>
-
         <meta content="article" property="og:type">
         <meta content="angular-my-modal with ui.bootstrap" property="og:title">
         <meta content="Angular My Modal provides a reusable directive to do modals in AngularJS using ui.bootstrap" property="og:description">
@@ -30,7 +29,7 @@
     </p>
 <![endif]-->
         <a href="https://github.com/stpa-co/angular-my-modal">
-            <img style="position: absolute; top: 0; right: 0; border: 0; z-index:9999" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png">
+        <img style="position: absolute; top: 0; right: 0; border: 0; z-index:9999" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png">
         </a>
         <div class="container">
             <div class="row">
@@ -56,9 +55,10 @@
                             <li role="presentation" class="dropdown">
                                 <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents" aria-expanded="false">Examples <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
-                                    <li><a href="#sample1" tabindex="-1" role="tab" id="sample1-tab" data-toggle="tab" aria-controls="sample1">Sample 1</a></li>
-                                    <li><a href="#sample2" tabindex="-1" role="tab" id="sample2-tab" data-toggle="tab" aria-controls="sample2">Sample 2</a></li>
-                                    <li><a href="#sample3" tabindex="-1" role="tab" id="sample3-tab" data-toggle="tab" aria-controls="sample3">Sample 3</a></li>
+                                    <li><a href="#sample1" tabindex="-1" role="tab" id="sample1-tab" data-toggle="tab" aria-controls="sample1">Sample 1 - The basic</a></li>
+                                    <li><a href="#sample2" tabindex="-1" role="tab" id="sample2-tab" data-toggle="tab" aria-controls="sample2">Sample 2 - Dynamic data-binding</a></li>
+                                    <li><a href="#sample3" tabindex="-1" role="tab" id="sample3-tab" data-toggle="tab" aria-controls="sample3">Sample 3 - Custom template</a></li>
+                                    <li><a href="#sample4" tabindex="-1" role="tab" id="sample4-tab" data-toggle="tab" aria-controls="sample4">Sample 4 - Many table rows</a></li>
                                 </ul>
                             </li>
                             <li role="presentation">
@@ -238,19 +238,23 @@ $ bower install
                             <div role="tabpanel" class="tab-pane fade active in" id="sample1" aria-labelledby="sample1-tab">
                                 <h2 id="sample-1-simple-modal">Sample 1 - Simple modal</h2>
 <hr>
-<p><my-modal
-name="My Beautiful Modal"
-body-class="my-body-class"
-body="<h1>Hello World!</h1><hr />I'm a modal. Looks good?"
-size="lg"><br>Click here to open a simple modal
-</my-modal></p>
+<h3>
+   <my-modal
+    name="My Beautiful Modal"
+    body-class="my-body-class"
+    body="<h1>Hello World!</h1><hr />I'm a modal. Looks good?"
+    size="lg" ng-cloak><br>    Click here to open the modal
+    </my-modal> 
+</h3>
+
+
 <p><em>sample-directive.html</em></p>
 <pre><code class="lang-html">&lt;my-modal
 name=&quot;My Beautiful Modal&quot;
 body-class=&quot;my-body-class&quot;
 body=&quot;&lt;h1&gt;Hello World!&lt;/h1&gt;&lt;hr /&gt;I&#39;m a modal. Looks good?&quot;
 size=&quot;lg&quot;&gt;                     
-Click here to open a simple modal
+Click here to open the modal
 &lt;/my-modal&gt;
 </code></pre>
 
@@ -258,19 +262,22 @@ Click here to open a simple modal
                             <div role="tabpanel" class="tab-pane fade" id="sample2" aria-labelledby="sample2-tab">
                                 <h2 id="sample-2-modal-with-dynamic-data-binding">Sample 2 - Modal with dynamic data-binding</h2>
 <hr>
-<p><my-modal
-name="My Beautiful Day Modal"
-body-class="my-body-class"
-body="<h1>Hello World!</h1><hr />I'm a modal. Today is <strong>{{vm.date}}</strong>"
-size="lg"><br>Click here to open a modal with dynamic data-binding
-</my-modal></p>
+<h3>
+    <my-modal
+    name="My Beautiful Day Modal"
+    body-class="my-body-class"
+    body="<h1>Hello World!</h1><hr />I'm a modal. Today is <strong>{{vm.date}}</strong>"
+    size="lg"><br>    Click here to open the modal
+    </my-modal>
+</h3>
+
 <p><em>sample-directive.html</em></p>
 <pre><code class="lang-html">&lt;my-modal
 name=&quot;My Beautiful Day Modal&quot;
 body-class=&quot;my-body-class&quot;
 body=&quot;&lt;h1&gt;Hello World!&lt;/h1&gt;&lt;hr /&gt;I&#39;m a modal. Today is &lt;strong&gt;{{vm.dateLabel}}&lt;/strong&gt;&quot;
 size=&quot;lg&quot;&gt;                     
-Click here to open a modal with dynamic data-binding
+Click here to open the modal
 &lt;/my-modal&gt;
 </code></pre>
 <p><em>sample-controller.js</em></p>
@@ -286,19 +293,22 @@ Click here to open a modal with dynamic data-binding
                             <div role="tabpanel" class="tab-pane fade" id="sample3" aria-labelledby="sample3-tab">
                                 <h2 id="sample-3-modal-with-custom-template">Sample 3 - Modal with custom template</h2>
 <hr>
-<p><my-modal
-name="My Modal With Template"
-template="sample-template.html"
-scope="vm"
-size="lg"><br>Click here to open a modal with custom template
-</my-modal></p>
+<h3>
+    <my-modal
+    name="My Modal With Template"
+    template="sample-template.html"
+    scope="vm"
+    size="lg"><br>    Click here to open the modal
+    </my-modal>
+</h3>
+
 <p><em>sample-directive.html</em></p>
 <pre><code class="lang-html">&lt;my-modal
 name=&quot;My Modal With Template&quot;
 template=&quot;sample-template.html&quot;
 scope=&quot;vm&quot;
 size=&quot;lg&quot;&gt;                     
-Click here to open a modal with custom template
+Click here to open the modal
 &lt;/my-modal&gt;
 </code></pre>
 <p><em>sample-template.html</em></p>
@@ -321,6 +331,91 @@ Click here to open a modal with custom template
         today = moment().format(&#39;dddd&#39;);
 
     vm.date = today + (today == &#39;Friday&#39; ? &#39; =D&#39; : &#39; =/&#39;);
+}
+</code></pre>
+
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="sample4" aria-labelledby="sample4-tab">
+                                <h2 id="sample-4-modal-with-100-table-rows">Sample 4 - Modal with 100 table rows</h2>
+<hr>
+<h3>
+    <my-modal
+    name="My Modal With 100 Table Rows"
+    template="sample4-template.html"
+    scope="vm"
+    size="lg"><br>    Click here to open the modal
+    </my-modal>
+</h3>
+
+<p><em>sample-directive.html</em></p>
+<pre><code class="lang-html">&lt;my-modal
+name=&quot;My Modal With 100 Table Rows&quot;
+template=&quot;sample4-template.html&quot;
+scope=&quot;vm&quot;
+size=&quot;lg&quot;&gt;                     
+Click here to open the modal
+&lt;/my-modal&gt;
+</code></pre>
+<p><em>sample-template.html</em></p>
+<pre><code class="lang-html">&lt;div class=&quot;modal-header&quot;&gt;
+    &lt;h3 class=&quot;modal-title&quot;&gt;{{vm.templateSettingNameLabel}}&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class=&quot;modal-body&quot;&gt;
+&lt;h1&gt;Hello World!&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;p&gt;I&#39;m a modal with 100 table rows. Looks good? do your best here&lt;/p&gt;
+&lt;p&gt;today is &lt;strong&gt;{{vm.templateDateLabel}}&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;you can pass custom objects to template by the scope param in directive&lt;/p&gt;
+&lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th class=&quot;text-center&quot;&gt;
+                #ID
+            &lt;/th&gt;
+            &lt;th class=&quot;text-center&quot;&gt;
+                Lorem
+            &lt;/th&gt;
+            &lt;th&gt;
+                Date
+            &lt;/th&gt;
+        &lt;/tr&gt;        
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr ng-repeat=&quot;item in StpaModalCtrl.scope.sample4&quot;&gt;
+            &lt;td class=&quot;text-center&quot;&gt;
+                {{vm.sample4ItemId}}
+            &lt;/td&gt;
+            &lt;td class=&quot;text-center&quot;&gt;
+                {{vm.sample4ItemLorem}}
+            &lt;/td&gt;
+            &lt;td&gt;
+                {{vm.sample4ItemDate}}
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&quot;modal-footer&quot;&gt;
+    &lt;button class=&quot;btn btn-primary&quot; ng-click=&quot;StpaModalCtrl.accept($event)&quot;&gt;OK&lt;/button&gt;
+    &lt;button class=&quot;btn btn-warning&quot; ng-click=&quot;StpaModalCtrl.cancel($event)&quot;&gt;Cancel&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<p><em>sample-controller.js</em></p>
+<pre><code class="lang-js">function ModalCtrl() {
+    var vm = this, //this way vm is passed to scope by controllerAs syntax with no using of $scope
+    today = moment().format(&#39;dddd&#39;);
+    vm.date = today + (today == &#39;Friday&#39; ? &#39; =D&#39; : &#39; =/&#39;);
+
+    //mock many rows for sample 4
+    var sample4 = [];
+    for (var i = 1; i &lt;= 100; i++) {
+        sample4.push({
+            &#39;id&#39;: i,
+            &#39;lorem&#39;: &#39;ipsum &#39; + i,
+            &#39;date&#39;: moment().add(i, &#39;days&#39;).calendar()
+        });
+    };
+    vm.sample4 = sample4;
 }
 </code></pre>
 

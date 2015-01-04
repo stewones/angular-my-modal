@@ -23,6 +23,7 @@
   * SOFTWARE.
   */
 
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak { display: none !important; }
 a.logo { padding: 0 !important; }
 a.logo img { max-width: 140px !important; margin-bottom: -36px; }
 a.logo:hover { background: transparent !important; opacity: .5}
