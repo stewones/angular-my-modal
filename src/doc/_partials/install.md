@@ -1,18 +1,18 @@
 ## Install for production
 -------------------------
-- install stpa-modal running the following command
+- install angular-my-modal running the following command
 
 ```shell
-$ bower install stpa-modal --save
+$ bower install angular-my-modal --save
 ```
 
-- **Note:** if you are asked about `Unable to find a suitable version for angular` answer `angular#1.3.x which is required by stpa-modal`.
+- **Note:** if you are asked about `Unable to find a suitable version for angular` answer `angular#1.3.x which is required by angular-my-modal`.
 - **Note:** if you are issued about `github.com connection timed out` just run `git config --global url.https://.insteadOf git://` in terminal.
 
-- include `stpa-modal.min.js` on your project. It should be located at `bower_components/stpa-modal/src`
+- include `angular-my-modal.min.js` on your project. It should be located at `bower_components/angular-my-modal/src`
 
 ```html
-<script src="../bower_components/stpa-modal/src/stpa-modal.min.js"></script>
+<script src="../bower_components/angular-my-modal/src/angular-my-modal.min.js"></script>
 ```
 
 - add `stpa.modal` and `ui.bootstrap` as a module dependency to your app
@@ -28,13 +28,13 @@ angular.module('my.app', [
 ## Usage
 --------
 
-- insert `<stpa-modal></stpa-modal>` directive into your template
+- insert `<my-modal></my-modal>` directive into your template where you want to display a modal link
 
 ```html
-<stpa-modal body="<h1>Hello World!</h1>">Open Modal</stpa-modal>
+<my-modal body="<h1>Hello World!</h1>">Open Modal</my-modal>
 ```
 
-Check out [documentation](https://modal.stpa.co) for more examples
+Check out [documentation](https://angular-my-modal.stpa.co) for more examples
 
 ## Install for development
 --------------------------
@@ -42,8 +42,8 @@ Check out [documentation](https://modal.stpa.co) for more examples
 - cd to your development folder and clone repo
 
 ```sh
-$ git clone https://github.com/stpa-co/stpa-modal.git stpa-modal
-$ cd stpa-modal
+$ git clone https://github.com/stpa-co/angular-my-modal
+$ cd angular-my-modal
 ```
 
 - install module dependencies
@@ -73,9 +73,9 @@ $ gulp serve:dist #Note: maybe you should have to use `sudo`
 $ gulp build #Note: maybe you should have to use `sudo`
 ```
 
-**Note:** running the command `gulp build` should generate minified src at `src/stpa-modal.min.js`, and the docs on `dist/doc` folder.
+**Note:** running the command `gulp build` should generate minified src at `src/angular-my-modal.min.js`, and the docs on `dist/doc` folder.
 
-**Note:** running the command `gulp serve` should serve on `http://localhost:3000/doc` with live reload. It also should watch the changes to re-build all the things, generating minified src at `src/stpa-modal.min.js`, and docs on `dist/doc` folder.
+**Note:** running the command `gulp serve` should serve on `http://localhost:3000/doc` with live reload. It also should watch the changes to re-build all the things, generating minified src at `src/angular-my-modal.min.js`, and docs on `dist/doc` folder.
 
 **Note:** running the command `gulp serve:dist` should do the same above but with all bower dependencies minified.
 
@@ -87,6 +87,13 @@ $ gulp build #Note: maybe you should have to use `sudo`
 
 Feel free to open issues if you run into a problem or if you just have suggestions. Pull Requests are always welcome.
 
+## Changelog
+- 1.0.0
+    - launched `stpa-modal` to easy creation of angular modals.
+- 2.0.0
+    - change of project name (including in bower) to `angular-my-modal`. this improves the SEO as well as make more sense.
+    - changes the name of callbacks and events to make more sense too.
+
 ## License
 ---------------
-The `stpa-modal` is open-sourced software licensed under the [MIT](http://opensource.org/licenses/MIT) license. Created by [@stewones](https://twitter.com/stewones)
+The `angular-my-modal` is open-sourced software licensed under the [MIT](http://opensource.org/licenses/MIT) license. Created by [@stewones](https://twitter.com/stewones)

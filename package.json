@@ -1,9 +1,9 @@
 {
-  "name": "stpa-modal",
-  "version": "1.0.0",
+  "name": "angular-my-modal",
+  "version": "2.0.0",
   "private": true,
   "type": "git",
-  "url": "git://github.com/stpa-co/stpa-modal.git",
+  "url": "git://github.com/stpa-co/angular-my-modal",
   "dependencies": {
     "browser-sync": "^1.8.2",
     "chalk": "^0.5.1",

@@ -1,1 +1,1 @@
-provides a reusable way to do modal in AngularJS using `ui.bootstrap`
+provides a reusable way to do modals in AngularJS using `ui.bootstrap`

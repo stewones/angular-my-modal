@@ -1,20 +1,21 @@
 {
-    "name": "stpa-modal",
-    "main": "src/stpa-modal.min.js",
-    "version": "1.0.0",
+    "name": "angular-my-modal",
+    "main": "src/angular-my-modal.min.js",
+    "version": "2.0.0",
     "authors": [
         "Stewan Pacheco <talk@stpa.co>"
     ],
-    "description": "Provides a reusable way to do modal in AngularJS",
+    "description": "Provides a reusable way to do modals in AngularJS",
     "keywords": [
         "angular",
         "angularjs",
         "modal",
         "angular-ui",
-        "bootstrap"
+        "bootstrap",
+        "stpa-modal"
     ],
     "license": "MIT",
-    "homepage": "https://stpa.co",
+    "homepage": "https://angular-my-modal.stpa.co",
     "private": false,
     "dependencies": {
         "angular": "1.3.x",

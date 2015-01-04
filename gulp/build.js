@@ -55,19 +55,19 @@
 
 
  gulp.task('stpa-modal-min', ['wiredep', 'markdown'], function() {
-     return gulp.src('src/stpa-modal.js')
+     return gulp.src('src/angular-my-modal.js')
          .pipe($.ngAnnotate())
          .pipe($.uglify({
              preserveComments: $.uglifySaveLicense
          }))
          .pipe($.stripDebug())
-         .pipe($.rename("stpa-modal.min.js"))
+         .pipe($.rename("angular-my-modal.min.js"))
          .pipe($.size())
          .pipe(gulp.dest('./src'));
  });
 
  gulp.task('stpa-modal-copy', ['stpa-modal-min'], function() {
-     return gulp.src(['src/stpa-modal.js', 'src/stpa-modal.min.js'])
+     return gulp.src(['src/angular-my-modal.js', 'src/angular-my-modal.min.js'])
          .pipe(gulp.dest('dist/doc/js'));
  });
 

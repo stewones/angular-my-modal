@@ -1,23 +1,23 @@
 ## Sample 3 - Modal with custom template
 ----------------------------------------
 
-<stpa-modal
+<my-modal
 name="My Modal With Template"
 template="sample-template.html"
 scope="vm"
 size="lg">                     
 Click here to open a modal with custom template
-</stpa-modal>
+</my-modal>
 
 *sample-directive.html*
 ```html
-<stpa-modal
+<my-modal
 name="My Modal With Template"
 template="sample-template.html"
 scope="vm"
 size="lg">                     
 Click here to open a modal with custom template
-</stpa-modal>
+</my-modal>
 ```
 
 *sample-template.html*

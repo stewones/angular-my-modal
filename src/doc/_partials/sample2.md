@@ -1,23 +1,23 @@
 ## Sample 2 - Modal with dynamic data-binding
 ---------------------------------------------
 
-<stpa-modal
+<my-modal
 name="My Beautiful Day Modal"
 body-class="my-body-class"
 body="<h1>Hello World!</h1><hr />I'm a modal. Today is <strong>{{vm.date}}</strong>"
 size="lg">                     
 Click here to open a modal with dynamic data-binding
-</stpa-modal>
+</my-modal>
 
 *sample-directive.html*
 ```html
-<stpa-modal
+<my-modal
 name="My Beautiful Day Modal"
 body-class="my-body-class"
 body="<h1>Hello World!</h1><hr />I'm a modal. Today is <strong>{{vm.dateLabel}}</strong>"
 size="lg">                     
 Click here to open a modal with dynamic data-binding
-</stpa-modal>
+</my-modal>
 ```
 
 *sample-controller.js*
