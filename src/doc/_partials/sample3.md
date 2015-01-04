@@ -1,13 +1,15 @@
 ## Sample 3 - Modal with custom template
 ----------------------------------------
 
-<my-modal
-name="My Modal With Template"
-template="sample-template.html"
-scope="vm"
-size="lg">                     
-Click here to open a modal with custom template
-</my-modal>
+<h3>
+    <my-modal
+    name="My Modal With Template"
+    template="sample-template.html"
+    scope="vm"
+    size="lg">                     
+    Click here to open the modal
+    </my-modal>
+</h3>
 
 *sample-directive.html*
 ```html
@@ -16,7 +18,7 @@ name="My Modal With Template"
 template="sample-template.html"
 scope="vm"
 size="lg">                     
-Click here to open a modal with custom template
+Click here to open the modal
 </my-modal>
 ```
 

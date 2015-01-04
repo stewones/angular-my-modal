@@ -7,7 +7,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="stpa.co" />
         <meta name="robots" content="index, follow"/>
-
         <meta content="article" property="og:type">
         <meta content="angular-my-modal with ui.bootstrap" property="og:title">
         <meta content="Angular My Modal provides a reusable directive to do modals in AngularJS using ui.bootstrap" property="og:description">
@@ -30,7 +29,7 @@
     <body>
         @@include('./_partials/ie10.html')
         <a href="https://github.com/stpa-co/angular-my-modal">
-            <img style="position: absolute; top: 0; right: 0; border: 0; z-index:9999" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png">
+        <img style="position: absolute; top: 0; right: 0; border: 0; z-index:9999" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png">
         </a>
         <div class="container">
             <div class="row">
@@ -55,9 +54,10 @@
                             <li role="presentation" class="dropdown">
                                 <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents" aria-expanded="false">Examples <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
-                                    <li><a href="#sample1" tabindex="-1" role="tab" id="sample1-tab" data-toggle="tab" aria-controls="sample1">Sample 1</a></li>
-                                    <li><a href="#sample2" tabindex="-1" role="tab" id="sample2-tab" data-toggle="tab" aria-controls="sample2">Sample 2</a></li>
-                                    <li><a href="#sample3" tabindex="-1" role="tab" id="sample3-tab" data-toggle="tab" aria-controls="sample3">Sample 3</a></li>
+                                    <li><a href="#sample1" tabindex="-1" role="tab" id="sample1-tab" data-toggle="tab" aria-controls="sample1">Sample 1 - The basic</a></li>
+                                    <li><a href="#sample2" tabindex="-1" role="tab" id="sample2-tab" data-toggle="tab" aria-controls="sample2">Sample 2 - Dynamic data-binding</a></li>
+                                    <li><a href="#sample3" tabindex="-1" role="tab" id="sample3-tab" data-toggle="tab" aria-controls="sample3">Sample 3 - Custom template</a></li>
+                                    <li><a href="#sample4" tabindex="-1" role="tab" id="sample4-tab" data-toggle="tab" aria-controls="sample4">Sample 4 - Many table rows</a></li>
                                 </ul>
                             </li>
                             <li role="presentation">
@@ -110,6 +110,9 @@
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="sample3" aria-labelledby="sample3-tab">
                                 @@include('./_partials/sample3.html')
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="sample4" aria-labelledby="sample4-tab">
+                                @@include('./_partials/sample4.html')
                             </div>
                             <br />
                             <ul class="social">

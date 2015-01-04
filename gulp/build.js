@@ -115,7 +115,7 @@
  });
 
  gulp.task('stpa-sample-template', ['markdown'], function() {
-     return gulp.src('src/doc/_partials/sample-template.html')
+     return gulp.src(['src/doc/_partials/sample-template.html','src/doc/_partials/sample4-template.html'])
          .pipe(gulp.dest('dist/doc/'));
  });
 
