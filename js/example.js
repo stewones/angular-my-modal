@@ -1,6 +1,6 @@
  /**
-  * stpa-modal provides a reusable way to do modal in AngularJS
-  * check out documentation in http://modal.stpa.co
+  * angular-my-modal provides a reusable way to do modal in AngularJS
+  * check out documentation in http://angular-my-modal.stpa.co
   *
   * Copyright © 2014 Stewan Pacheco <talk@stpa.co>
   *
@@ -70,12 +70,12 @@
              }
          }, 1000);
 
-         $rootScope.$on('StpaModalOkCallback', function() {
+         $rootScope.$on('StpaModalAccepted', function() {
              alert('Yay, ok button pressed =D');
              //alert('Ok Pressed');
          });
 
-         $rootScope.$on('StpaModalCancelCallback', function() {
+         $rootScope.$on('StpaModalCanceled', function() {
              alert('Ops, cancel button pressed =/');
              //alert('Cancel Pressed');
          });

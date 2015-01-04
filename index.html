@@ -8,7 +8,7 @@
         <meta name="author" content="stpa.co" />
         <meta name="robots" content="index, follow"/>
         <meta content="article" property="og:type">
-        <meta content="stpa-modal" property="og:title">
+        <meta content="angular-my-modal" property="og:title">
         <meta content="Reusable directive for modal in AngularJS using ui.bootstrap" property="og:description">
         <meta content="https://modal.stpa.co" property="og:url">
         <meta content="https://stpa.co/about/" property="article:author">
@@ -27,24 +27,24 @@
         Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
     </p>
 <![endif]-->
-        <a href="https://github.com/stpa-co/stpa-modal">
+        <a href="https://github.com/stpa-co/angular-my-modal">
             <img style="position: absolute; top: 0; right: 0; border: 0; z-index:9999" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png">
         </a>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
-                        <ul class="nav tabs-vertical col-sm-2" role="tablist">
+                        <ul class="nav tabs-vertical col-sm-3" role="tablist">
                             <li class="text-center">
                                 <a href="http://stpa.co" class="logo">
                                 <img src="https://stpa.co/assets/images/stpa-symbol.png">
                                 </a>
-                                <h1>stpa-modal</h1>
+                                <h1>angular my modal</h1>
                                 <!-- GIT STAR -->
-                                <a class="github-button" href="https://github.com/stpa-co/stpa-modal" data-icon="octicon-star" data-count-href="/stpa-co/stpa-modal/stargazers" data-count-api="/repos/stpa-co/stpa-modal#stargazers_count">Star</a>
+                                <a class="github-button" href="https://github.com/stpa-co/angular-my-modal" data-icon="octicon-star" data-count-href="/stpa-co/angular-my-modal/stargazers" data-count-api="/repos/stpa-co/angular-my-modal#stargazers_count">Star</a>
                                 <!-- /GIT STAR -->
                                 <p>
-                                <p>provides a reusable way to do modal in AngularJS using <code>ui.bootstrap</code></p>
+                                <p>provides a reusable way to do modals in AngularJS using <code>ui.bootstrap</code></p>
 
                                 </p>
                             </li>
@@ -75,7 +75,7 @@
                             <li class="text-center copyright">
                                 Built with love by <a href="https://twitter.com/stewones">@stewones</a> using gulp.js, angular.js and bootstrap.
                                 <br />
-                                Open an <a href="https://github.com/stpa-co/stpa-modal/issues">issue</a> and make your <a href="https://github.com/stpa-co/stpa-modal/pulls">pull-request</a>.
+                                Open an <a href="https://github.com/stpa-co/angular-my-modal/issues">issue</a> and make your <a href="https://github.com/stpa-co/angular-my-modal/pulls">pull-request</a>.
                                 <br />
                                 Code licensed under MIT.
                             </li>
@@ -85,23 +85,23 @@
                                 <!-- /GIT FOLLOW -->
                             </li>
                         </ul>
-                        <div id="" class="tab-content col-sm-10">
+                        <div id="" class="tab-content col-sm-9">
                             <div role="tabpanel" class="tab-pane fade" id="install" aria-labelledby="install-tab">
                                 <h2 id="install-for-production">Install for production</h2>
 <hr>
 <ul>
-<li>install stpa-modal running the following command</li>
+<li>install angular-my-modal running the following command</li>
 </ul>
-<pre><code class="lang-shell">$ bower install stpa-modal --save
+<pre><code class="lang-shell">$ bower install angular-my-modal --save
 </code></pre>
 <ul>
-<li><strong>Note:</strong> if you are asked about <code>Unable to find a suitable version for angular</code> answer <code>angular#1.3.x which is required by stpa-modal</code>.</li>
+<li><strong>Note:</strong> if you are asked about <code>Unable to find a suitable version for angular</code> answer <code>angular#1.3.x which is required by angular-my-modal</code>.</li>
 <li><p><strong>Note:</strong> if you are issued about <code>github.com connection timed out</code> just run <code>git config --global url.https://.insteadOf git://</code> in terminal.</p>
 </li>
-<li><p>include <code>stpa-modal.min.js</code> on your project. It should be located at <code>bower_components/stpa-modal/src</code></p>
+<li><p>include <code>angular-my-modal.min.js</code> on your project. It should be located at <code>bower_components/angular-my-modal/src</code></p>
 </li>
 </ul>
-<pre><code class="lang-html">&lt;script src=&quot;../bower_components/stpa-modal/src/stpa-modal.min.js&quot;&gt;&lt;/script&gt;
+<pre><code class="lang-html">&lt;script src=&quot;../bower_components/angular-my-modal/src/angular-my-modal.min.js&quot;&gt;&lt;/script&gt;
 </code></pre>
 <ul>
 <li>add <code>stpa.modal</code> and <code>ui.bootstrap</code> as a module dependency to your app</li>
@@ -114,19 +114,19 @@
 <h2 id="usage">Usage</h2>
 <hr>
 <ul>
-<li>insert <code>&lt;stpa-modal&gt;&lt;/stpa-modal&gt;</code> directive into your template</li>
+<li>insert <code>&lt;my-modal&gt;&lt;/my-modal&gt;</code> directive into your template where you want to display a modal link</li>
 </ul>
-<pre><code class="lang-html">&lt;stpa-modal body=&quot;&lt;h1&gt;Hello World!&lt;/h1&gt;&quot;&gt;Open Modal&lt;/stpa-modal&gt;
+<pre><code class="lang-html">&lt;my-modal body=&quot;&lt;h1&gt;Hello World!&lt;/h1&gt;&quot;&gt;Open Modal&lt;/my-modal&gt;
 </code></pre>
-<p>Check out <a href="https://modal.stpa.co">documentation</a> for more examples</p>
+<p>Check out <a href="https://angular-my-modal.stpa.co">documentation</a> for more examples</p>
 <h2 id="install-for-development">Install for development</h2>
 <hr>
 <ul>
 <li>install node and bower on your environment</li>
 <li>cd to your development folder and clone repo</li>
 </ul>
-<pre><code class="lang-sh">$ git clone https://github.com/stpa-co/stpa-modal.git stpa-modal
-$ cd stpa-modal
+<pre><code class="lang-sh">$ git clone https://github.com/stpa-co/angular-my-modal
+$ cd angular-my-modal
 </code></pre>
 <ul>
 <li>install module dependencies</li>
@@ -152,29 +152,41 @@ $ bower install
 </ul>
 <pre><code class="lang-sh">$ gulp build #Note: maybe you should have to use `sudo`
 </code></pre>
-<p><strong>Note:</strong> running the command <code>gulp build</code> should generate minified src at <code>src/stpa-modal.min.js</code>, and the docs on <code>dist/doc</code> folder.</p>
-<p><strong>Note:</strong> running the command <code>gulp serve</code> should serve on <code>http://localhost:3000/doc</code> with live reload. It also should watch the changes to re-build all the things, generating minified src at <code>src/stpa-modal.min.js</code>, and docs on <code>dist/doc</code> folder.</p>
+<p><strong>Note:</strong> running the command <code>gulp build</code> should generate minified src at <code>src/angular-my-modal.min.js</code>, and the docs on <code>dist/doc</code> folder.</p>
+<p><strong>Note:</strong> running the command <code>gulp serve</code> should serve on <code>http://localhost:3000/doc</code> with live reload. It also should watch the changes to re-build all the things, generating minified src at <code>src/angular-my-modal.min.js</code>, and docs on <code>dist/doc</code> folder.</p>
 <p><strong>Note:</strong> running the command <code>gulp serve:dist</code> should do the same above but with all bower dependencies minified.</p>
 <p><strong>Note:</strong> to update project src please open an issue, fork the project, do your work, run <code>gulp build</code> and make a pull-request. thx =D </p>
 <p><strong>Note:</strong> to update docs just run <code>gulp build</code> or <code>./buil.sh</code>, and make a pull-request into <code>gh-pages</code> branch only with contents of <code>dist/doc</code> folder. I like to work with another folder only for the docs (pointing to the same remote), maybe you will also. You can use the <code>build.sh</code> script located in the root to automate the process, but check it before.</p>
 <p><strong>Note</strong> Also check the tasks located on gulp folder for more details.</p>
 <p>Feel free to open issues if you run into a problem or if you just have suggestions. Pull Requests are always welcome.</p>
+<h2 id="changelog">Changelog</h2>
+<ul>
+<li>1.0.0<ul>
+<li>launched <code>stpa-modal</code> to easy creation of angular modals.</li>
+</ul>
+</li>
+<li>2.0.0<ul>
+<li>change of project name (including in bower) to <code>angular-my-modal</code>. this improves the SEO as well as make more sense.</li>
+<li>changes the name of callbacks and events to make more sense too.</li>
+</ul>
+</li>
+</ul>
 <h2 id="license">License</h2>
 <hr>
-<p>The <code>stpa-modal</code> is open-sourced software licensed under the <a href="http://opensource.org/licenses/MIT">MIT</a> license. Created by <a href="https://twitter.com/stewones">@stewones</a></p>
+<p>The <code>angular-my-modal</code> is open-sourced software licensed under the <a href="http://opensource.org/licenses/MIT">MIT</a> license. Created by <a href="https://twitter.com/stewones">@stewones</a></p>
 
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="params" aria-labelledby="params-tab">
                                 <h2 id="directive-accepts-the-following-params">Directive accepts the following params</h2>
 <hr>
 <pre><code class="lang-js">{
-    name: &#39;&#39;, //default &quot;My stpa-modal&quot;
-    bodyClass: &#39;&#39;, //default &quot;my-body-class&quot;
+    name: &#39;&#39;, //default &quot;Angular My Modal&quot;
+    bodyClass: &#39;&#39;, //default null
     body: &#39;&#39;, //default null
     template: &#39;path_to_html/file.html&#39;, //default false
     scope: {} //default null 
     size: &#39;lg&#39;, //default sm | options lg - md - sm
-    windowClass: &#39;&#39;, //default &quot;stpa-modal-window&quot;
+    windowClass: &#39;&#39;, //default &quot;angular-my-modal-window&quot;
     backdrop: true, //default true 
 }
 </code></pre>
@@ -224,40 +236,40 @@ $ bower install
                             <div role="tabpanel" class="tab-pane fade active in" id="sample1" aria-labelledby="sample1-tab">
                                 <h2 id="sample-1-simple-modal">Sample 1 - Simple modal</h2>
 <hr>
-<p><stpa-modal
+<p><my-modal
 name="My Beautiful Modal"
 body-class="my-body-class"
 body="<h1>Hello World!</h1><hr />I'm a modal. Looks good?"
 size="lg"><br>Click here to open a simple modal
-</stpa-modal></p>
+</my-modal></p>
 <p><em>sample-directive.html</em></p>
-<pre><code class="lang-html">&lt;stpa-modal
+<pre><code class="lang-html">&lt;my-modal
 name=&quot;My Beautiful Modal&quot;
 body-class=&quot;my-body-class&quot;
 body=&quot;&lt;h1&gt;Hello World!&lt;/h1&gt;&lt;hr /&gt;I&#39;m a modal. Looks good?&quot;
 size=&quot;lg&quot;&gt;                     
 Click here to open a simple modal
-&lt;/stpa-modal&gt;
+&lt;/my-modal&gt;
 </code></pre>
 
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="sample2" aria-labelledby="sample2-tab">
                                 <h2 id="sample-2-modal-with-dynamic-data-binding">Sample 2 - Modal with dynamic data-binding</h2>
 <hr>
-<p><stpa-modal
+<p><my-modal
 name="My Beautiful Day Modal"
 body-class="my-body-class"
 body="<h1>Hello World!</h1><hr />I'm a modal. Today is <strong>{{vm.date}}</strong>"
 size="lg"><br>Click here to open a modal with dynamic data-binding
-</stpa-modal></p>
+</my-modal></p>
 <p><em>sample-directive.html</em></p>
-<pre><code class="lang-html">&lt;stpa-modal
+<pre><code class="lang-html">&lt;my-modal
 name=&quot;My Beautiful Day Modal&quot;
 body-class=&quot;my-body-class&quot;
 body=&quot;&lt;h1&gt;Hello World!&lt;/h1&gt;&lt;hr /&gt;I&#39;m a modal. Today is &lt;strong&gt;{{vm.dateLabel}}&lt;/strong&gt;&quot;
 size=&quot;lg&quot;&gt;                     
 Click here to open a modal with dynamic data-binding
-&lt;/stpa-modal&gt;
+&lt;/my-modal&gt;
 </code></pre>
 <p><em>sample-controller.js</em></p>
 <pre><code class="lang-js">function ModalCtrl() {
@@ -272,20 +284,20 @@ Click here to open a modal with dynamic data-binding
                             <div role="tabpanel" class="tab-pane fade" id="sample3" aria-labelledby="sample3-tab">
                                 <h2 id="sample-3-modal-with-custom-template">Sample 3 - Modal with custom template</h2>
 <hr>
-<p><stpa-modal
+<p><my-modal
 name="My Modal With Template"
 template="sample-template.html"
 scope="vm"
 size="lg"><br>Click here to open a modal with custom template
-</stpa-modal></p>
+</my-modal></p>
 <p><em>sample-directive.html</em></p>
-<pre><code class="lang-html">&lt;stpa-modal
+<pre><code class="lang-html">&lt;my-modal
 name=&quot;My Modal With Template&quot;
 template=&quot;sample-template.html&quot;
 scope=&quot;vm&quot;
 size=&quot;lg&quot;&gt;                     
 Click here to open a modal with custom template
-&lt;/stpa-modal&gt;
+&lt;/my-modal&gt;
 </code></pre>
 <p><em>sample-template.html</em></p>
 <pre><code class="lang-html">&lt;div class=&quot;modal-header&quot;&gt;
@@ -315,12 +327,12 @@ Click here to open a modal with custom template
                             <ul class="social">
                                 <li style="width: 140px; text-align: left;">
                                     <!-- FB -->
-                                    <iframe src="//www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fmodal.stpa.co&amp;layout=button_count" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe>
+                                    <iframe src="//www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fangular-my-modal.stpa.co&amp;layout=button_count" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe>
                                     <!-- /FB -->
                                 </li>
                                 <li style="width: 154px; margin-right: 12px;" class="hidden-xs">
                                     <!-- G+ -->
-                                    <div class="g-plus" data-action="share" data-annotation="bubble" data-href="https://modal.stpa.co"></div>
+                                    <div class="g-plus" data-action="share" data-annotation="bubble" data-href="https://angular-my-modal.stpa.co"></div>
                                     <!-- /G+ -->
                                 </li>
                                 <li style="margin-right: 12px;" class="visible-lg">
@@ -330,17 +342,17 @@ Click here to open a modal with custom template
                                 </li>
                                 <li style="margin-right: 12px;" class="visible-lg">
                                     <!-- GIT WATCH -->
-                                    <a class="github-button" href="https://github.com/stpa-co/stpa-modal" data-icon="octicon-eye" data-count-href="/stpa-co/stpa-modal/watchers" data-count-api="/repos/stpa-co/stpa-modal#subscribers_count">Watch</a>
+                                    <a class="github-button" href="https://github.com/stpa-co/angular-my-modal" data-icon="octicon-eye" data-count-href="/stpa-co/angular-my-modal/watchers" data-count-api="/repos/stpa-co/angular-my-modal#subscribers_count">Watch</a>
                                     <!-- /GIT WATCH -->
                                 </li>
                                 <li style="margin-right: 12px;" class="hidden-xs">
                                     <!-- GIT ISSUE -->
-                                    <a class="github-button" href="https://github.com/stpa-co/stpa-modal/issues" data-icon="octicon-issue-opened" data-count-api="/repos/stpa-co/stpa-modal#open_issues_count">Issue</a>
+                                    <a class="github-button" href="https://github.com/stpa-co/angular-my-modal/issues" data-icon="octicon-issue-opened" data-count-api="/repos/stpa-co/angular-my-modal#open_issues_count">Issue</a>
                                     <!-- /GIT ISSUE -->
                                 </li>
                                 <li class="visible-lg">
                                     <!-- FORK -->
-                                    <a class="github-button" href="https://github.com/stpa-co/stpa-modal" data-icon="octicon-git-branch" data-count-href="/stpa-co/stpa-modal/network" data-count-api="/repos/stpa-co/stpa-modal#forks_count">Fork</a>
+                                    <a class="github-button" href="https://github.com/stpa-co/angular-my-modal" data-icon="octicon-git-branch" data-count-href="/stpa-co/angular-my-modal/network" data-count-api="/repos/stpa-co/angular-my-modal#forks_count">Fork</a>
                                     <!-- /FORK -->
                                 </li>
                             </ul>
@@ -351,7 +363,7 @@ Click here to open a modal with custom template
         </div>
         <script src="https://cdn.jsdelivr.net/highlight.js/8.4.0/highlight.min.js"></script>
         <script src="js/vendor-e4216363.js"></script>
-        <script src="./js/stpa-modal.min.js"></script>
+        <script src="./js/angular-my-modal.min.js"></script>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <script src="https://buttons.github.io/buttons.js" async defer id="github-bjs"></script>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
